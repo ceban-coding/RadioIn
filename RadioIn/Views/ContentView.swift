@@ -16,18 +16,25 @@ struct ContentView: View {
     }
     
     var body: some View {
-
+        
         
         TabView {
             NavigationView {
                 Text("Favorites")
-                .navigationBarTitle("Favorites")
+                    .navigationBarTitle("Favorites")
+                    .toolbar {
+                        ToolbarItem(placement: .navigationBarLeading) {
+                            Button("Edit") {
+                                print("Help tapped")
+                            }
+                        }
+                    }
             }
             
-                    .tabItem {
-                        Image(systemName: "suit.heart")
-                        Text("Favorites")
-                }
+            .tabItem {
+                Image(systemName: "suit.heart")
+                Text("Favorites")
+            }
             
             SearchView()
                 .tabItem {

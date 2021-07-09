@@ -9,17 +9,28 @@ import SwiftUI
 
 struct SearchView: View {
     
-    var radios: [Radio] = RadioList.topTen
+    @State private var radios: [Radio] = RadioList.topTen
     
     var body: some View {
         
         VStack {
             SearchBar(text: .constant(""))
-            List(radios, id: \.id) { radio in
-                StationRow(radio: radio)
+            List {
+                ForEach(radios, id: \.id) { item in
+                    StationRow(radio: item)
+                }
+                .onDelete(perform: delete)
+               
             }
         }
     }
+    
+    //Delete method for deleting rows from List
+     func  delete(at offsets: IndexSet) {
+        radios.remove(atOffsets: offsets)
+    }
+    
+  
 }
 
 struct SwiftUIView_Previews: PreviewProvider {
