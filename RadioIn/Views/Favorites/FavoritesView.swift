@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @State private var radios: [RadioIn] = load("radio.json")
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        List {
+            ForEach(radios, id: \.id) { station in
+                StationRow(radio: station)
+                    .listRowInsets(EdgeInsets())
+                    .padding(8)
+            }
+            .onMove { (source, destination) in
+                self.radios.move(fromOffsets: source, toOffset: destination)
+            }
+            .onDelete { offsets in
+                self.radios.remove(atOffsets: offsets)
+            }
+        }
     }
 }
 

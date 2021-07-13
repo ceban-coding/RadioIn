@@ -11,37 +11,36 @@ struct info: View {
     @Environment(\.openURL) var openURL
     
     var body: some View {
-        VStack (alignment: .center, spacing: 45) {
+        VStack (alignment: .center, spacing: 50) {
             Text(" I am an iOS Developer,\n and  RadioIn it’s my first application on AppStore. Thank everyone for \n downloading  and your support.\n Appreciate any review. Please check\n my profiles, and I will \n appreciate a lot for following.")
                 .font(.title3)
-                .fontWeight(.medium)
                 .foregroundColor(.white)
                 .multilineTextAlignment(.center)
-                .lineSpacing(3)
+                .lineSpacing(2)
             
             HStack (alignment: .center, spacing: 25){
                 Button(action: openFacebook) {
                     Image("Facebook")
                         .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
+                        .frame(width: 40, height: 40, alignment: .center)
                 }
                 
                 Button(action: openInsta) {
                     Image("Insta")
                         .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
+                        .frame(width: 40, height: 40, alignment: .center)
                 }
                 
                 Button(action: openGithub) {
                     Image("GitHub")
                         .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
+                        .frame(width: 40, height: 40, alignment: .center)
                 }
                 
                 Button(action: openLinkdin) {
                     Image("LinkdIn")
                         .resizable()
-                        .frame(width: 50, height: 50, alignment: .center)
+                        .frame(width: 40, height: 40, alignment: .center)
                 }
             }
         }

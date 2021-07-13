@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    @State private var selection = 0
     @State private var editMode = EditMode.inactive
     
     init() {
@@ -16,47 +16,45 @@ struct ContentView: View {
     }
     
     var body: some View {
-        
-        
-        TabView {
-            NavigationView {
-                Text("Favorites")
-                    .navigationBarTitle("Favorites")
-                    .toolbar {
-                        ToolbarItem(placement: .navigationBarLeading) {
-                            Button("Edit") {
-                                print("Help tapped")
-                            }
-                        }
-                    }
-            }
-            
-            .tabItem {
-                Image(systemName: "suit.heart")
-                Text("Favorites")
-            }
-            
+        TabView(selection: $selection) {
+            FavoritesView()
+                .tag(1)
+                .tabItem {
+                    Image(systemName: "suit.heart.fill")
+                    Text("Favorites")
+                }
             SearchView()
+                .tag(0)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-            Text("Player Tab")
+            PlayerView()
+                .tag(2)
                 .tabItem {
                     Image(systemName: "play.circle")
                     Text("Player")
                 }
             info()
+                .tag(3)
                 .tabItem {
                     Image(systemName: "info.circle")
                     Text("Info")
                 }
         }
-        .edgesIgnoringSafeArea(.all)
+        .overlay(
+            VStack {
+                Spacer()
+                PlayerBar()
+                .frame(height: 210)
+                
+                }
+                .edgesIgnoringSafeArea(.all)
+        )
         
+        .accentColor(.green)
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {
@@ -64,3 +62,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

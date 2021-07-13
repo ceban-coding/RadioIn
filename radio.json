@@ -1,0 +1,91 @@
+[
+    {
+        "imageName": "retro",
+        "title": "Retro FM",
+        "subtitle": "88.3 FM - Moscow, Russia",
+        "id": 1001,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "diaspora",
+        "title": "Diaspora FM",
+        "subtitle": "FM 82.8 - Chisinau, Moldova",
+        "id": 1002,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": true
+    },
+    {
+        "imageName": "kiss",
+        "title": "Kiss FM",
+        "subtitle": "FM 100.9 - Cisinau, Moldova",
+        "id": 1003,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "zum",
+        "title": "Radio ZUM",
+        "subtitle": "93.3 FM - Chisinau, Moldova",
+        "id": 1004,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {  "imageName": "profm",
+        "title": "Pro FM",
+        "subtitle": "FM 106.9 - Chisinau, Moldova",
+        "id": 1005,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "ruskoe",
+        "title": "Ruskoe Radio",
+        "subtitle": "FM 105.7 - Moscow, Russia",
+        "id": 1006,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": true
+    },
+    {
+        "imageName": "radioOnline",
+        "title": "101 Ruskii RapM",
+        "subtitle": "101.RU - Moscow, Russia",
+        "id": 1007,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "volna",
+        "title": "Ruskaya Volna",
+        "subtitle": "AMG Radio - Moscow, Russia",
+        "id": 1008,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "energy",
+        "title": "Radio Energy",
+        "subtitle": "Russian Radio - Latvia",
+        "id": 1009,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    },
+    {
+        "imageName": "hitFm",
+        "title": "HIT FM",
+        "subtitle": "FM 101.7",
+        "id": 1010,
+        "urlString": "https://retrofm.ru/online/player.php",
+        "isFeatured": false,
+        "isFavorite": false
+    }
+]

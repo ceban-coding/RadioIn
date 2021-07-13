@@ -15,15 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="9rW-cI-Vyu">
-                                <rect key="frame" x="132" y="137" width="150" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="VaF-4X-x0b"/>
-                                    <constraint firstAttribute="height" constant="60" id="lzl-1i-1nY"/>
-                                </constraints>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ri" translatesAutoresizingMaskIntoConstraints="NO" id="9Fy-XJ-7zn">
-                                <rect key="frame" x="57" y="220.5" width="300" height="465"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ri" translatesAutoresizingMaskIntoConstraints="NO" id="9Fy-XJ-7zn">
+                                <rect key="frame" x="57" y="337" width="300" height="232.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="G2z-o3-5BN"/>
                                 </constraints>
@@ -32,9 +25,6 @@
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <constraints>
                             <constraint firstItem="9Fy-XJ-7zn" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="FDo-cT-GNX"/>
-                            <constraint firstItem="9rW-cI-Vyu" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="93" id="Hlz-Xp-2bJ"/>
-                            <constraint firstItem="9rW-cI-Vyu" firstAttribute="centerX" secondItem="Bcu-3y-fUS" secondAttribute="centerX" id="Vkx-Bc-42w"/>
-                            <constraint firstItem="9Fy-XJ-7zn" firstAttribute="top" secondItem="9rW-cI-Vyu" secondAttribute="bottom" constant="23.5" id="WdD-LB-vgk"/>
                             <constraint firstItem="9Fy-XJ-7zn" firstAttribute="centerY" secondItem="Bcu-3y-fUS" secondAttribute="centerY" id="eaB-sh-cND"/>
                         </constraints>
                     </view>
@@ -45,7 +35,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="126" height="54"/>
-        <image name="ri" width="414" height="465"/>
+        <image name="ri" width="207" height="232.5"/>
     </resources>
 </document>

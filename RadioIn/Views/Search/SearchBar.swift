@@ -9,11 +9,9 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var text: String
-    
     @State private var isEditing = false
     
     var body: some View {
-        
         HStack {
             Image(systemName: "magnifyingglass")
                 .foregroundColor(.gray)
@@ -57,6 +55,7 @@ extension View {
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
         SearchBar(text: .constant(""))
+            .previewLayout(.sizeThatFits)
     }
 }
 
