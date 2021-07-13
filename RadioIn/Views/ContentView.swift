@@ -16,26 +16,48 @@ struct ContentView: View {
     }
     
     var body: some View {
+        
         TabView(selection: $selection) {
-            FavoritesView()
-                .tag(1)
-                .tabItem {
-                    Image(systemName: "suit.heart.fill")
-                    Text("Favorites")
-                }
-            SearchView()
+            NavigationView {
+                FavoritesView()
+                    .padding(.top, 7)
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(leading: EditButton())
+                    .navigationBarTitle("Favorites")
+            }
+            .tag(1)
+            .tabItem {
+                Image(systemName: "suit.heart.fill")
+                Text("Favorites")
+            }
+            
+            NavigationView {
+                SearchView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitle("Search")
+            }
                 .tag(0)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
                     Text("Search")
                 }
-            PlayerView()
+            
+            NavigationView {
+                PlayerView()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitle("Player")
+            }
                 .tag(2)
                 .tabItem {
                     Image(systemName: "play.circle")
                     Text("Player")
                 }
-            info()
+            
+            NavigationView {
+                info()
+                    .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarTitle("iON Developer")
+            }
                 .tag(3)
                 .tabItem {
                     Image(systemName: "info.circle")
@@ -46,16 +68,13 @@ struct ContentView: View {
             VStack {
                 Spacer()
                 PlayerBar()
-                .frame(height: 210)
-                
-                }
-                .edgesIgnoringSafeArea(.all)
+                    .frame(height: 210)
+            }
+            .edgesIgnoringSafeArea(.all)
         )
-        
         .accentColor(.green)
     }
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

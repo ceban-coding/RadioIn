@@ -16,11 +16,11 @@ struct StationRow: View {
             HStack {
                 radio.image
                     .resizable()
-                    .scaledToFit()
+                    .cornerRadius(5)
                     .frame(width: 60, height: 60)
-                    .padding(5)
-                    
-                
+                    .scaledToFill()
+                    .padding(4)
+       
                 VStack(alignment: .leading, spacing: 5) {
                     Text(radio.title)
                         .font(.title3)
@@ -40,8 +40,9 @@ struct StationRow: View {
             }
             Spacer()
         }
-       .background(Color("TabBarColor"))
+        .background(Color(.systemGray6))
         .edgesIgnoringSafeArea(.all)
+        .cornerRadius(5)
     }
 }
 

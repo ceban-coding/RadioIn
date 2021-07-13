@@ -36,7 +36,7 @@ struct PlayerView: View {
                     .fixedSize()
                 }
                 Spacer()
-                PlayerBar()
+                Spacer()
             }
         }
     }

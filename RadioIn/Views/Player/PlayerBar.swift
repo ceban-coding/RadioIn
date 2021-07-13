@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct PlayerBar: View {
-    
     var body: some View {
         ZStack {
             HStack {
@@ -22,26 +21,24 @@ struct PlayerBar: View {
                 Spacer()
                 
                 VStack {
-                    (Text("Retro FM  ") + Text(Image(systemName:  "info.circle")))
+                    (Text("Retro FM ") + Text(Image(systemName:  "info.circle")))
                         .kerning(1.0)
                         .font(.body)
                         .multilineTextAlignment(.center)
                     
                     Text("Stopped")
+                        .kerning(1.0)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
                     
                 }
                 .padding(5)
-                
                 Spacer()
-                
                 Button(action: {}) {
                     HeartView(isFilled: false)
                         .font(.title)
                 }
             }
-            
         }
         .padding(.leading)
         .padding(.trailing)

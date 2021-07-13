@@ -10,21 +10,25 @@ import SwiftUI
 struct SearchView: View {
     
     var body: some View {
-        VStack {
-            SearchBar(text: .constant(""))
-            List {
-                ForEach(radios, id: \.id) { station in
+        ScrollView {
+            LazyVStack {
+                VStack {
+                    SearchBar(text: .constant(""))
+                }
+                .padding(.top, 8)
+               
+                ForEach(radios, id: \.self) { station in
                     StationRow(radio: station)
-                        .listRowInsets(EdgeInsets())
-                        .padding(8)
                 }
             }
+            .padding(.leading, 10)
+            .padding(.trailing, 10)
         }
+        .padding(.bottom, 50)
+        
+        
     }
 }
-
-
-
 
 
 struct SwiftUIView_Previews: PreviewProvider {

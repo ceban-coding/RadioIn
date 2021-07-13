@@ -17,7 +17,6 @@ struct SearchBar: View {
                 .foregroundColor(.gray)
                 .opacity(0.5)
             TextField("Search", text: $text)
-                
                 .onTapGesture {
                     self.isEditing = true
                 }
@@ -36,10 +35,8 @@ struct SearchBar: View {
             }
         }
         .padding(10)
-        .padding(.horizontal, 5)
-        .background(Color(.systemGray6))
+        .background(Color(.systemGray5))
         .cornerRadius(8)
-        .padding(.horizontal, 10)
     }
 }
 
