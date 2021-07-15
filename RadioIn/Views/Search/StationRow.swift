@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct StationRow: View {
-    let radio: RadioIn
+    var radio: RadioIn
+    @State private var radioSelected = false
     
     var body: some View {
         
@@ -44,12 +45,13 @@ struct StationRow: View {
         .edgesIgnoringSafeArea(.all)
         .cornerRadius(5)
     }
+
 }
 
 struct StationRow_Previews: PreviewProvider {
     static var previews: some View {
         StationRow(radio: radios[1])
-            .previewLayout(.sizeThatFits)
+            .previewLayout(.device)
     }
 }
 

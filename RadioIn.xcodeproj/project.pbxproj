@@ -17,6 +17,9 @@
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
+		D675AA78269F30FF00B0B827 /* row.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675AA77269F30FF00B0B827 /* row.swift */; };
+		D675AA7A269F338000B0B827 /* custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675AA79269F338000B0B827 /* custom.swift */; };
+		D677E4C826A0CAF900A2024F /* List+Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677E4C726A0CAF900A2024F /* List+Separator.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
 		D6B203BE269CD1F300E2D9B0 /* radio.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B203BD269CD1F300E2D9B0 /* radio.json */; };
 		D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B203BF269CF62400E2D9B0 /* HeartView.swift */; };
@@ -38,6 +41,9 @@
 		D65E73F02697E2370050E7DB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		D65E73F22697E44F0050E7DB /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		D66E071926978E85006920D6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		D675AA77269F30FF00B0B827 /* row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = row.swift; sourceTree = "<group>"; };
+		D675AA79269F338000B0B827 /* custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom.swift; sourceTree = "<group>"; };
+		D677E4C726A0CAF900A2024F /* List+Separator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "List+Separator.swift"; path = "RadioIn/List+Separator.swift"; sourceTree = SOURCE_ROOT; };
 		D685D1E926990431004FDE3F /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
 		D6B203BD269CD1F300E2D9B0 /* radio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = radio.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D6B203BF269CF62400E2D9B0 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
@@ -97,6 +103,7 @@
 		D66E071726973BD4006920D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D677E4C726A0CAF900A2024F /* List+Separator.swift */,
 				D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */,
 				D6D577F3269C996100AE3ABA /* ModelData.swift */,
 			);
@@ -133,6 +140,15 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		D675AA7B269F3B7600B0B827 /* custom list */ = {
+			isa = PBXGroup;
+			children = (
+				D675AA77269F30FF00B0B827 /* row.swift */,
+				D675AA79269F338000B0B827 /* custom.swift */,
+			);
+			path = "custom list";
+			sourceTree = "<group>";
+		};
 		D685D1E12698E23D004FDE3F /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				D60530262695F8AC00142D75 /* ContentView.swift */,
+				D675AA7B269F3B7600B0B827 /* custom list */,
 				D66E071826978E65006920D6 /* Search */,
 				D66E071D2697A7D7006920D6 /* Favorites */,
 				D685D1E12698E23D004FDE3F /* Player */,
@@ -240,6 +257,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D677E4C826A0CAF900A2024F /* List+Separator.swift in Sources */,
 				D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */,
 				D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */,
 				D60530272695F8AC00142D75 /* ContentView.swift in Sources */,
@@ -248,10 +266,12 @@
 				D65E73F32697E44F0050E7DB /* info.swift in Sources */,
 				D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */,
 				D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */,
+				D675AA7A269F338000B0B827 /* custom.swift in Sources */,
 				D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */,
 				D658B284269656CB00859A7E /* SearchBar.swift in Sources */,
 				D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */,
 				D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */,
+				D675AA78269F30FF00B0B827 /* row.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

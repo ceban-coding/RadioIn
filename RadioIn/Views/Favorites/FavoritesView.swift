@@ -8,30 +8,35 @@
 import SwiftUI
 
 struct FavoritesView: View {
-    @State private var radios: [RadioIn] = load("radio.json")
-   
+    
     var body: some View {
-        
-        ScrollView {
-            LazyVStack {
-                ForEach(radios, id: \.self) { station in
-                    StationRow(radio: station)
+        NavigationView {
+            VStack {
+                ScrollView {
+                    LazyVStack {
+                        ForEach(radios) { station in
+                            ZStack {
+                                    NavigationLink(
+                                    destination: PlayerView(radio: station)) {
+                                        StationRow(radio: station)
+                                }
+                            }
+                        }
+                    }
+                    .padding(.top, 9)
+                    .padding(.leading, 10)
+                    .padding(.trailing, 10)
                 }
-                .onMove { (source, destination) in
-                    self.radios.move(fromOffsets: source, toOffset: destination)
-                }
-                .onDelete { offsets in
-                    self.radios.remove(atOffsets: offsets)
-                }
+                PlayerBar()
             }
-            .padding(.trailing, 10)
-            .padding(.leading, 10)
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarTitle("Favorites")
         }
-        .padding(.bottom, 50)
     }
 }
 
 struct FavoritesView_Previews: PreviewProvider {
+
     static var previews: some View {
         FavoritesView()
     }

@@ -19,24 +19,30 @@ struct PlayerBar: View {
                 }
                 
                 Spacer()
-                
                 VStack {
-                    (Text("Retro FM ") + Text(Image(systemName:  "info.circle")))
-                        .kerning(1.0)
-                        .font(.body)
-                        .multilineTextAlignment(.center)
-                    
+                    HStack(alignment: .top) {
+                        Text("Retro FM")
+                            .font(.body)
+                            .fontWeight(.medium)
+                            .kerning(1.0)
+                            .multilineTextAlignment(.center)
+                            
+                        
+                        Text(Image(systemName:  "info.circle"))
+                            .font(.caption)
+                            .fontWeight(.medium)
+                            .padding(.top, 2)
+                    }
                     Text("Stopped")
                         .kerning(1.0)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
-                    
                 }
                 .padding(5)
                 Spacer()
                 Button(action: {}) {
                     HeartView(isFilled: false)
-                        .font(.title)
+                        .font(.title2)
                 }
             }
         }
