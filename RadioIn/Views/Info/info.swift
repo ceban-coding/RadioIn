@@ -13,6 +13,7 @@ struct info: View {
     var body: some View {
         NavigationView {
             VStack (alignment: .center, spacing: 50) {
+                
                 Text(" I am an iOS Developer,\n and  RadioIn it’s my first application on AppStore. Thank everyone for \n downloading  and your support.\n Appreciate any review. Please check\n my profiles, and I will \n appreciate a lot for following.")
                     .font(.title3)
                     .foregroundColor(.white)

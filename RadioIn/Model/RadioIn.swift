@@ -20,7 +20,7 @@ struct RadioIn: Hashable, Codable, Identifiable{
         Image(imageName)
     }
     
-    private var urlString: String
+    var urlString: String
     var url: URL {
         URL(string: urlString)!
     }

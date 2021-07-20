@@ -6,12 +6,17 @@
 //
 
 import SwiftUI
+import SwiftAudioPlayer
 
 struct PlayerBar: View {
     var body: some View {
         ZStack {
             HStack {
-                Button(action: {}) {
+                Button(action: {
+                    let url = URL(string:"http://retroserver.streamr.ru:8043/retro256.mp3")!
+                    SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
+                    SAPlayer.shared.play()
+                }) {
                     Image("playButton")
                         .resizable()
                         .scaledToFit()
@@ -23,14 +28,12 @@ struct PlayerBar: View {
                     HStack(alignment: .top) {
                         Text("Retro FM")
                             .font(.body)
-                            .fontWeight(.medium)
                             .kerning(1.0)
                             .multilineTextAlignment(.center)
                             
                         
                         Text(Image(systemName:  "info.circle"))
                             .font(.caption)
-                            .fontWeight(.medium)
                             .padding(.top, 2)
                     }
                     Text("Stopped")
@@ -50,8 +53,15 @@ struct PlayerBar: View {
         .padding(.trailing)
         .edgesIgnoringSafeArea(.all)
         .background(Color("playerBar"))
+        .opacity(0.8)
+        .onTapGesture {
+            withAnimation(.easeIn) {
+                
+            }
+        }
     }
 }
+
 
 struct PlayerBar_Previews: PreviewProvider {
     static var previews: some View {

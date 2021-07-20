@@ -8,20 +8,20 @@
 import SwiftUI
 
 struct StationRow: View {
-    var radio: RadioIn
+    @State var radio: RadioIn
     @State private var radioSelected = false
     
     var body: some View {
         
         HStack {
-            HStack {
+            ZStack {
                 radio.image
                     .resizable()
-                    .cornerRadius(5)
                     .frame(width: 60, height: 60)
                     .scaledToFill()
-                    .padding(4)
-       
+            }
+            HStack {
+               
                 VStack(alignment: .leading, spacing: 5) {
                     Text(radio.title)
                         .font(.title3)
@@ -39,11 +39,12 @@ struct StationRow: View {
                         .padding()
                 }
             }
-            Spacer()
+            
         }
-        .background(Color(.systemGray6))
-        .edgesIgnoringSafeArea(.all)
+        .background(Blur())
+        //.background(Color(.systemGray6))
         .cornerRadius(5)
+        .edgesIgnoringSafeArea(.all)
     }
 
 }

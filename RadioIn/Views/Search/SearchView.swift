@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct SearchView: View {
-  
-    
+
     var body: some View {
+        
         NavigationView {
-         
             VStack {
                 VStack {
                     SearchBar(text: .constant(""))
@@ -34,10 +33,11 @@ struct SearchView: View {
                     .padding(.leading, 10)
                     .padding(.trailing, 10)
                 }
-                PlayerBar()
+               PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Search")
+           
         }
     }
 

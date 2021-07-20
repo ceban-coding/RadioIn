@@ -7,28 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		488B12DCE1C6E06C044CDA29 /* Pods_RadioIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */; };
 		D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530242695F8AC00142D75 /* RadioInApp.swift */; };
 		D60530272695F8AC00142D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530262695F8AC00142D75 /* ContentView.swift */; };
 		D60530292695F8AD00142D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60530282695F8AD00142D75 /* Assets.xcassets */; };
 		D605302C2695F8AE00142D75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D605302B2695F8AE00142D75 /* Preview Assets.xcassets */; };
 		D60530362695FC3300142D75 /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60530352695FC3300142D75 /* LaunchScreenView.storyboard */; };
+		D61BDDFF26A11D8C00CA6777 /* animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61BDDFE26A11D8C00CA6777 /* animation.swift */; };
 		D658B2822696518C00859A7E /* StationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B2812696518C00859A7E /* StationRow.swift */; };
 		D658B284269656CB00859A7E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B283269656CB00859A7E /* SearchBar.swift */; };
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
-		D675AA78269F30FF00B0B827 /* row.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675AA77269F30FF00B0B827 /* row.swift */; };
-		D675AA7A269F338000B0B827 /* custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = D675AA79269F338000B0B827 /* custom.swift */; };
-		D677E4C826A0CAF900A2024F /* List+Separator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D677E4C726A0CAF900A2024F /* List+Separator.swift */; };
+		D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* TabBarView.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
 		D6B203BE269CD1F300E2D9B0 /* radio.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B203BD269CD1F300E2D9B0 /* radio.json */; };
 		D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B203BF269CF62400E2D9B0 /* HeartView.swift */; };
+		D6C52D1A26A0FB6E0062DB6B /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */; };
 		D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7FAE826964A5F0000532B /* SearchView.swift */; };
 		D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */; };
 		D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F3269C996100AE3ABA /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioIn.debug.xcconfig"; path = "Target Support Files/Pods-RadioIn/Pods-RadioIn.debug.xcconfig"; sourceTree = "<group>"; };
+		7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioIn.release.xcconfig"; path = "Target Support Files/Pods-RadioIn/Pods-RadioIn.release.xcconfig"; sourceTree = "<group>"; };
 		D60530212695F8AC00142D75 /* RadioIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60530242695F8AC00142D75 /* RadioInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioInApp.swift; sourceTree = "<group>"; };
 		D60530262695F8AC00142D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,20 +39,21 @@
 		D605302B2695F8AE00142D75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D605302D2695F8AE00142D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D60530352695FC3300142D75 /* LaunchScreenView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreenView.storyboard; sourceTree = "<group>"; };
+		D61BDDFE26A11D8C00CA6777 /* animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animation.swift; sourceTree = "<group>"; };
 		D658B2812696518C00859A7E /* StationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationRow.swift; sourceTree = "<group>"; };
 		D658B283269656CB00859A7E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D65E73F02697E2370050E7DB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		D65E73F22697E44F0050E7DB /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		D66E071926978E85006920D6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		D675AA77269F30FF00B0B827 /* row.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = row.swift; sourceTree = "<group>"; };
-		D675AA79269F338000B0B827 /* custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = custom.swift; sourceTree = "<group>"; };
-		D677E4C726A0CAF900A2024F /* List+Separator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "List+Separator.swift"; path = "RadioIn/List+Separator.swift"; sourceTree = SOURCE_ROOT; };
+		D676D05226A1C4250030FC05 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D685D1E926990431004FDE3F /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
 		D6B203BD269CD1F300E2D9B0 /* radio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = radio.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D6B203BF269CF62400E2D9B0 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
+		D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 		D6C7FAE826964A5F0000532B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioIn.swift; sourceTree = "<group>"; };
 		D6D577F3269C996100AE3ABA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,18 +61,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				488B12DCE1C6E06C044CDA29 /* Pods_RadioIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F99642D4BEC452108BB3D43 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2390D09E0CCF3B581C2253D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */,
+				7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D60530182695F8AC00142D75 = {
 			isa = PBXGroup;
 			children = (
 				D6B203BD269CD1F300E2D9B0 /* radio.json */,
 				D60530232695F8AC00142D75 /* RadioIn */,
 				D60530222695F8AC00142D75 /* Products */,
+				2390D09E0CCF3B581C2253D5 /* Pods */,
+				0F99642D4BEC452108BB3D43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +128,9 @@
 		D66E071726973BD4006920D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D677E4C726A0CAF900A2024F /* List+Separator.swift */,
 				D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */,
 				D6D577F3269C996100AE3ABA /* ModelData.swift */,
+				D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,13 +165,12 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		D675AA7B269F3B7600B0B827 /* custom list */ = {
+		D676D05126A1C4150030FC05 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				D675AA77269F30FF00B0B827 /* row.swift */,
-				D675AA79269F338000B0B827 /* custom.swift */,
+				D676D05226A1C4250030FC05 /* TabBarView.swift */,
 			);
-			path = "custom list";
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		D685D1E12698E23D004FDE3F /* Player */ = {
@@ -154,6 +178,7 @@
 			children = (
 				D65E73F02697E2370050E7DB /* PlayerView.swift */,
 				D685D1E926990431004FDE3F /* PlayerBar.swift */,
+				D61BDDFE26A11D8C00CA6777 /* animation.swift */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -170,7 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D60530262695F8AC00142D75 /* ContentView.swift */,
-				D675AA7B269F3B7600B0B827 /* custom list */,
+				D676D05126A1C4150030FC05 /* TabBar */,
 				D66E071826978E65006920D6 /* Search */,
 				D66E071D2697A7D7006920D6 /* Favorites */,
 				D685D1E12698E23D004FDE3F /* Player */,
@@ -193,9 +218,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D60530302695F8AE00142D75 /* Build configuration list for PBXNativeTarget "RadioIn" */;
 			buildPhases = (
+				E2471EACE5F6187CD106A80E /* [CP] Check Pods Manifest.lock */,
 				D605301D2695F8AC00142D75 /* Sources */,
 				D605301E2695F8AC00142D75 /* Frameworks */,
 				D605301F2695F8AC00142D75 /* Resources */,
+				D2A215AADBD2749F3728DD6F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -252,26 +279,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		D2A215AADBD2749F3728DD6F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2471EACE5F6187CD106A80E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RadioIn-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D605301D2695F8AC00142D75 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D677E4C826A0CAF900A2024F /* List+Separator.swift in Sources */,
 				D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */,
 				D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */,
 				D60530272695F8AC00142D75 /* ContentView.swift in Sources */,
 				D658B2822696518C00859A7E /* StationRow.swift in Sources */,
+				D61BDDFF26A11D8C00CA6777 /* animation.swift in Sources */,
 				D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */,
 				D65E73F32697E44F0050E7DB /* info.swift in Sources */,
 				D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */,
 				D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */,
-				D675AA7A269F338000B0B827 /* custom.swift in Sources */,
 				D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */,
 				D658B284269656CB00859A7E /* SearchBar.swift in Sources */,
 				D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */,
 				D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */,
-				D675AA78269F30FF00B0B827 /* row.swift in Sources */,
+				D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */,
+				D6C52D1A26A0FB6E0062DB6B /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +465,7 @@
 		};
 		D60530312695F8AE00142D75 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -418,6 +488,7 @@
 		};
 		D60530322695F8AE00142D75 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
