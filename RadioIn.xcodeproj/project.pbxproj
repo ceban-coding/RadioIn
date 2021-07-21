@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,6 +27,7 @@
 		D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7FAE826964A5F0000532B /* SearchView.swift */; };
 		D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */; };
 		D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F3269C996100AE3ABA /* ModelData.swift */; };
+		D6FBA5A626A868DB001EA242 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FBA5A526A868DB001EA242 /* API.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		D6C7FAE826964A5F0000532B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioIn.swift; sourceTree = "<group>"; };
 		D6D577F3269C996100AE3ABA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		D6FBA5A526A868DB001EA242 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,7 +84,6 @@
 				25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */,
 				7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -131,6 +132,7 @@
 				D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */,
 				D6D577F3269C996100AE3ABA /* ModelData.swift */,
 				D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */,
+				D6FBA5A526A868DB001EA242 /* API.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +342,7 @@
 				D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */,
 				D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */,
 				D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */,
+				D6FBA5A626A868DB001EA242 /* API.swift in Sources */,
 				D6C52D1A26A0FB6E0062DB6B /* Modifiers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

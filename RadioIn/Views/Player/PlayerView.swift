@@ -7,13 +7,13 @@
 
 import SwiftUI
 import SwiftAudioPlayer
-import AVFoundation
 
 struct PlayerView: View {
     var radio: RadioIn
+    @State var isPlaying : Bool = false
     
     var body: some View {
-        
+      
         NavigationView {
             ZStack(alignment: .top) {
                 VStack {
@@ -23,29 +23,38 @@ struct PlayerView: View {
                     
                     ZStack(alignment: .bottomLeading) {
                         Button(action: {
-                            
                         }) {
                             HeartView(isFilled: false)
                                 .font(.title)
                         }
                         Spacer()
+                        
                         HStack(alignment: .center) {
                             Button(action: {
-                                let url = URL(string: "http://195.95.206.17/HitFM")!
-                                SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
-                                SAPlayer.shared.play()
-                            }) {
-                                Image("Play")
-                                    .resizable()
-                                    .frame(width: 175, height: 175)
-                                    .scaledToFit()
+                                self.isPlaying.toggle()
+                                playStation()
                             }
-                            .frame(width: 350, height: 175, alignment: .center)
+                            
+                            , label: {
+                                if isPlaying {
+                                    Image("pause")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 350, height: 175, alignment: .center)
+                                } else {
+                                    Image("Play")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 350, height: 175, alignment: .center)
+                                }
+                            })
                         }
+                        
                         .fixedSize()
                     }
+                    
                     Spacer()
-                    animationView()
+                    
                     Spacer()
                     PlayerBar()                  
                 }
@@ -54,8 +63,19 @@ struct PlayerView: View {
             .navigationBarTitle("Player")
         }
     }
+   
+    func playStation() {
+        guard let url = URL(string: "http://nashe.streamr.ru/nashe-128.mp3") else {
+            print("Invalid URL")
+            return
+        }
+        SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
+        SAPlayer.shared.play()
+    }
+    
+    
+    
 }
-
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {

@@ -36,9 +36,11 @@ struct SearchView: View {
                PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
+            
             .navigationBarTitle("Search")
            
         }
+   
     }
 
 }

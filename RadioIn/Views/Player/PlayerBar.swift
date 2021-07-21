@@ -9,29 +9,33 @@ import SwiftUI
 import SwiftAudioPlayer
 
 struct PlayerBar: View {
+    @State var isPlaying : Bool = false
+    
     var body: some View {
         ZStack {
             HStack {
                 Button(action: {
-                    let url = URL(string:"http://retroserver.streamr.ru:8043/retro256.mp3")!
-                    SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
-                    SAPlayer.shared.play()
-                }) {
-                    Image("playButton")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 35, height: 35)
-                }
+                    self.isPlaying.toggle()
+                    playMusic()
+                }, label: {
+                    if isPlaying {
+                        Image("pausebar")
+                    }
+                    else {
+                        Image("playButton")
+                    }
+                })
+                .frame(width: 15, height: 15)
                 
                 Spacer()
+                
                 VStack {
                     HStack(alignment: .top) {
                         Text("Retro FM")
                             .font(.body)
                             .kerning(1.0)
                             .multilineTextAlignment(.center)
-                            
-                        
+  
                         Text(Image(systemName:  "info.circle"))
                             .font(.caption)
                             .padding(.top, 2)
@@ -59,6 +63,13 @@ struct PlayerBar: View {
                 
             }
         }
+    }
+    
+    func playMusic() {
+        let url = URL(string: "http://195.95.206.17/HitFM")!
+        SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
+        SAPlayer.shared.play()
+
     }
 }
 
