@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
-import SwiftAudioPlayer
 
 struct PlayerView: View {
+
     var radio: RadioIn
-    @State var isPlaying : Bool = false
+    
+    @State var playerPaused : Bool = true
+    
+    let radioPlayer = musicPlayer()
     
     var body: some View {
       
@@ -19,6 +22,7 @@ struct PlayerView: View {
                 VStack {
                     StationRow(radio: radio)
                         .padding()
+                    
                     Spacer()
                     
                     ZStack(alignment: .bottomLeading) {
@@ -27,35 +31,28 @@ struct PlayerView: View {
                             HeartView(isFilled: false)
                                 .font(.title)
                         }
-                        Spacer()
                         
+                        Spacer()
+        
                         HStack(alignment: .center) {
                             Button(action: {
-                                self.isPlaying.toggle()
-                                playStation()
-                            }
-                            
-                            , label: {
-                                if isPlaying {
-                                    Image("pause")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 350, height: 175, alignment: .center)
-                                } else {
-                                    Image("Play")
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 350, height: 175, alignment: .center)
-                                }
-                            })
+                                 self.playerPaused.toggle()
+                                 if self.playerPaused {
+                                   radioPlayer.pause()
+                                 }
+                                 else {
+                                   playStation()
+                                 }
+                               }) {
+                                 Image( playerPaused ? "Play" : "pause")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 350, height: 175)
+                             }
                         }
-                        
-                        .fixedSize()
                     }
-                    
                     Spacer()
                     
-                    Spacer()
                     PlayerBar()                  
                 }
             }
@@ -63,18 +60,11 @@ struct PlayerView: View {
             .navigationBarTitle("Player")
         }
     }
-   
+    
     func playStation() {
-        guard let url = URL(string: "http://nashe.streamr.ru/nashe-128.mp3") else {
-            print("Invalid URL")
-            return
-        }
-        SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
-        SAPlayer.shared.play()
+        radioPlayer.initPlayer(url: "http://rusradio.hostingradio.ru/rusradio96.aacp")
+        radioPlayer.play()
     }
-    
-    
-    
 }
 
 struct PlayerView_Previews: PreviewProvider {

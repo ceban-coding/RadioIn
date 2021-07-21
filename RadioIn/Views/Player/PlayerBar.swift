@@ -6,27 +6,31 @@
 //
 
 import SwiftUI
-import SwiftAudioPlayer
 
 struct PlayerBar: View {
-    @State var isPlaying : Bool = false
+    
+    var radioPlayer = musicPlayer()
+    @State var playerPaused : Bool = true
     
     var body: some View {
         ZStack {
             HStack {
+            
                 Button(action: {
-                    self.isPlaying.toggle()
-                    playMusic()
-                }, label: {
-                    if isPlaying {
-                        Image("pausebar")
-                    }
-                    else {
-                        Image("playButton")
-                    }
-                })
-                .frame(width: 15, height: 15)
-                
+                     self.playerPaused.toggle()
+                     if self.playerPaused {
+                       radioPlayer.pause()
+                     }
+                     else {
+                       playStation()
+                     }
+                   }) {
+                     Image( playerPaused ? "playButton" : "pausebar")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35, height: 35)
+                 }
+                               
                 Spacer()
                 
                 VStack {
@@ -65,11 +69,9 @@ struct PlayerBar: View {
         }
     }
     
-    func playMusic() {
-        let url = URL(string: "http://195.95.206.17/HitFM")!
-        SAPlayer.shared.startRemoteAudio(withRemoteUrl: url)
-        SAPlayer.shared.play()
-
+    func playStation() {
+        radioPlayer.initPlayer(url: "http://195.95.206.17/HitFM")
+        radioPlayer.play()
     }
 }
 
