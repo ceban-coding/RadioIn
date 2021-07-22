@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct SearchView: View {
-
     var body: some View {
-        
         NavigationView {
             VStack {
                 VStack {
                     SearchBar(text: .constant(""))
-                        .padding(.top, 8)
-                        .padding(.leading, 10)
-                        .padding(.trailing, 10)
+                        .padding(.init(top: 8, leading: 10, bottom: 0, trailing: 10))
                 }
                 ScrollView {
                     LazyVStack {
@@ -30,10 +26,9 @@ struct SearchView: View {
                             }
                         }
                     }
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
+                    .padding(.init( top: 0, leading: 10, bottom: 10, trailing: 10))
                 }
-               PlayerBar()
+                PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
             

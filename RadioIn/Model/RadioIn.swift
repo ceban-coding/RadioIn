@@ -13,6 +13,7 @@ struct RadioIn: Hashable, Codable, Identifiable{
     var title: String
     var subtitle: String
     var isFavorite: Bool
+    var urlString: String
     
     
     private var imageName: String
@@ -20,8 +21,5 @@ struct RadioIn: Hashable, Codable, Identifiable{
         Image(imageName)
     }
     
-    var urlString: String
-    var url: URL {
-        URL(string: urlString)!
-    }
+
 }

@@ -2,27 +2,27 @@
     {
         "imageName": "retro",
         "title": "Retro FM",
-        "subtitle": "88.3 FM - Moscow, Russia",
+        "subtitle": "Retro FM 105.0 Serpukhov",
         "id": 1001,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://188.164.138.46:8010/retrofm.m3u",
         "isFeatured": false,
         "isFavorite": false
     },
     {
         "imageName": "diaspora",
         "title": "Diaspora FM",
-        "subtitle": "FM 82.8 - Chisinau, Moldova",
+        "subtitle": "The Republic Of Moldova",
         "id": 1002,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "https://n01.radiojar.com/58ts0hd5hrquv?rj-ttl=5&rj-tok=AAABbdDdznQAS4mz5X2BNKzzdA",
         "isFeatured": false,
         "isFavorite": true
     },
     {
         "imageName": "kiss",
         "title": "Kiss FM",
-        "subtitle": "FM 100.9 - Cisinau, Moldova",
+        "subtitle": "Kiss FM 106.5",
         "id": 1003,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://online.kissfm.ua/KissFM",
         "isFeatured": false,
         "isFavorite": false
     },
@@ -31,24 +31,24 @@
         "title": "Radio ZUM",
         "subtitle": "93.3 FM - Chisinau, Moldova",
         "id": 1004,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://185.181.229.196:8000/live",
         "isFeatured": false,
         "isFavorite": false
     },
     {  "imageName": "profm",
         "title": "Pro FM",
-        "subtitle": "FM 106.9 - Chisinau, Moldova",
+        "subtitle": "Romania",
         "id": 1005,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://edge126.rdsnet.ro:84/profm/profm.mp3",
         "isFeatured": false,
         "isFavorite": false
     },
     {
         "imageName": "ruskoe",
         "title": "Ruskoe Radio",
-        "subtitle": "FM 105.7 - Moscow, Russia",
+        "subtitle": "RU",
         "id": 1006,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://rusradio.hostingradio.ru/rusradio96.aacp",
         "isFeatured": false,
         "isFavorite": true
     },
@@ -57,7 +57,7 @@
         "title": "101 Ruskii RapM",
         "subtitle": "101.RU - Moscow, Russia",
         "id": 1007,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://ic7.101.ru:8000/c1_2",
         "isFeatured": false,
         "isFavorite": false
     },
@@ -66,7 +66,7 @@
         "title": "Ruskaya Volna",
         "subtitle": "AMG Radio - Moscow, Russia",
         "id": 1008,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://air.radiorecord.ru:8102/gop_320",
         "isFeatured": false,
         "isFavorite": false
     },
@@ -75,7 +75,7 @@
         "title": "Radio Energy",
         "subtitle": "Russian Radio - Latvia",
         "id": 1009,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://chanson.hostingradio.ru:8041/chanson-uncensored256.mp3",
         "isFeatured": false,
         "isFavorite": false
     },
@@ -84,7 +84,7 @@
         "title": "HIT FM",
         "subtitle": "FM 101.7",
         "id": 1010,
-        "urlString": "https://retrofm.ru/online/player.php",
+        "urlString": "http://77.73.90.46:1055/avtoradio",
         "isFeatured": false,
         "isFavorite": false
     }

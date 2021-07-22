@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import SwiftUI
 import AVFoundation
 
 class musicPlayer {
@@ -14,7 +13,8 @@ class musicPlayer {
     var player = AVPlayer()
     
     func initPlayer(url: String) {
-        guard let url = URL(string: url) else { return }
+        
+        guard let url = URL.init(string: url) else { return }
         let playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem)
         playAudioBackground()
@@ -22,14 +22,17 @@ class musicPlayer {
     
     func playAudioBackground() {
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: [.mixWithOthers, .allowAirPlay])
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: .mixWithOthers)
             print("Playback OK")
             try AVAudioSession.sharedInstance().setActive(true)
             print("Session is Active")
         } catch {
             print(error)
         }
+        
     }
+    
+    
     
     func pause(){
         player.pause()

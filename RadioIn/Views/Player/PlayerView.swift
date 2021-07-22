@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlayerView: View {
-
+    
     var radio: RadioIn
     
     @State var playerPaused : Bool = true
@@ -18,7 +18,7 @@ struct PlayerView: View {
     var body: some View {
       
         NavigationView {
-            ZStack(alignment: .top) {
+            
                 VStack {
                     StationRow(radio: radio)
                         .padding()
@@ -26,14 +26,7 @@ struct PlayerView: View {
                     Spacer()
                     
                     ZStack(alignment: .bottomLeading) {
-                        Button(action: {
-                        }) {
-                            HeartView(isFilled: false)
-                                .font(.title)
-                        }
-                        
-                        Spacer()
-        
+                
                         HStack(alignment: .center) {
                             Button(action: {
                                  self.playerPaused.toggle()
@@ -50,20 +43,30 @@ struct PlayerView: View {
                                     .frame(width: 350, height: 175)
                              }
                         }
+                        
+                        Button(action: {
+                        }) {
+                            HeartView(isFilled: false)
+                                .font(.title)
+                        }
                     }
                     Spacer()
-                    
-                    PlayerBar()                  
+                    CategoryRow(radio: radio)
+                        .padding(.bottom)
+            
+                    PlayerBar()
                 }
-            }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")
         }
+        
     }
     
     func playStation() {
-        radioPlayer.initPlayer(url: "http://rusradio.hostingradio.ru/rusradio96.aacp")
-        radioPlayer.play()
+        DispatchQueue.main.async {
+            radioPlayer.initPlayer(url: radio.urlString)
+            radioPlayer.play()
+        }
     }
 }
 

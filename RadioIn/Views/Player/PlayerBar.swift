@@ -8,23 +8,13 @@
 import SwiftUI
 
 struct PlayerBar: View {
-    
-    var radioPlayer = musicPlayer()
     @State var playerPaused : Bool = true
     
     var body: some View {
         ZStack {
             HStack {
             
-                Button(action: {
-                     self.playerPaused.toggle()
-                     if self.playerPaused {
-                       radioPlayer.pause()
-                     }
-                     else {
-                       playStation()
-                     }
-                   }) {
+                Button(action: {}) {
                      Image( playerPaused ? "playButton" : "pausebar")
                         .resizable()
                         .scaledToFit()
@@ -48,6 +38,7 @@ struct PlayerBar: View {
                         .kerning(1.0)
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
+                        .foregroundColor(.secondary)
                 }
                 .padding(5)
                 Spacer()
@@ -67,11 +58,6 @@ struct PlayerBar: View {
                 
             }
         }
-    }
-    
-    func playStation() {
-        radioPlayer.initPlayer(url: "http://195.95.206.17/HitFM")
-        radioPlayer.play()
     }
 }
 

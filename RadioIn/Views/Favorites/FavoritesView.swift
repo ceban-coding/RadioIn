@@ -23,12 +23,9 @@ struct FavoritesView: View {
                             }
                         }
                     }
-                    .padding(.top, 9)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
+                    .padding(10)
                 }
-                PlayerBar()
-                    
+               // PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Favorites")
