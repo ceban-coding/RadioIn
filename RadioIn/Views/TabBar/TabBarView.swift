@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct TabBarView: View {
+    @State private var isPlaying: Bool = false
     @State private var currentSelection = 1
     @State var expand = false
+
     
     var body: some View {
         ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {

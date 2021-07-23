@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct FavoritesView: View {
+    @State private var isPlaying: Bool = false
     
     var body: some View {
         NavigationView {
@@ -16,16 +17,16 @@ struct FavoritesView: View {
                     LazyVStack {
                         ForEach(radios) { station in
                             ZStack {
-                                    NavigationLink(
+                                NavigationLink(
                                     destination: PlayerView(radio: station)) {
-                                        StationRow(radio: station)
+                                    StationRow(radio: station)
                                 }
                             }
                         }
                     }
                     .padding(10)
                 }
-               // PlayerBar()
+                PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Favorites")
@@ -34,7 +35,7 @@ struct FavoritesView: View {
 }
 
 struct FavoritesView_Previews: PreviewProvider {
-
+    
     static var previews: some View {
         FavoritesView()
     }

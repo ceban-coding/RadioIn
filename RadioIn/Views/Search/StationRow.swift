@@ -41,10 +41,12 @@ struct StationRow: View {
             }
             
         }
-        .background(Blur())
-        //.background(Color(.systemGray6))
+        
+        //.background(Blur())
+        .background(Color("TabBarColor"))
         .cornerRadius(5)
         .edgesIgnoringSafeArea(.all)
+        
     }
 
 }
@@ -52,7 +54,7 @@ struct StationRow: View {
 struct StationRow_Previews: PreviewProvider {
     static var previews: some View {
         StationRow(radio: radios[1])
-            .previewLayout(.device)
+            .previewLayout(.sizeThatFits)
     }
 }
 

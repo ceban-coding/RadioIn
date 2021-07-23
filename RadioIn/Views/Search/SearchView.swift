@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -19,10 +20,7 @@ struct SearchView: View {
                     LazyVStack {
                         ForEach(radios) { station in
                             ZStack {
-                                    NavigationLink(
-                                    destination: PlayerView(radio: station)) {
-                                        StationRow(radio: station)
-                                }
+                                    StationRow(radio: station)
                             }
                         }
                     }
@@ -31,9 +29,7 @@ struct SearchView: View {
                 PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
-            
             .navigationBarTitle("Search")
-           
         }
    
     }

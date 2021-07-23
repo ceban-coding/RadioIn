@@ -29,5 +29,6 @@ struct CategoryItem: View {
 struct CategoryItem_Previews: PreviewProvider {
     static var previews: some View {
         CategoryItem(radios: radios[1])
+            .previewLayout(.sizeThatFits)
     }
 }

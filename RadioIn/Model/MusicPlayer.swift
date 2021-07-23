@@ -22,7 +22,7 @@ class musicPlayer {
     
     func playAudioBackground() {
         do {
-            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playback, mode: AVAudioSession.Mode.default, options: .mixWithOthers)
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSession.Category.playAndRecord, mode: AVAudioSession.Mode.default, options: [.mixWithOthers, .defaultToSpeaker, .allowBluetooth, .allowAirPlay])
             print("Playback OK")
             try AVAudioSession.sharedInstance().setActive(true)
             print("Session is Active")
@@ -31,9 +31,7 @@ class musicPlayer {
         }
         
     }
-    
-    
-    
+   
     func pause(){
         player.pause()
     }

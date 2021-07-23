@@ -14,7 +14,9 @@ struct PlayerBar: View {
         ZStack {
             HStack {
             
-                Button(action: {}) {
+                Button(action: {
+                    self.playerPaused.toggle()
+                }) {
                      Image( playerPaused ? "playButton" : "pausebar")
                         .resizable()
                         .scaledToFit()
