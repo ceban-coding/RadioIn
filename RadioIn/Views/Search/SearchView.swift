@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct SearchView: View {
+ 
     
     var body: some View {
         NavigationView {
@@ -35,7 +36,6 @@ struct SearchView: View {
     }
 
 }
-
 
 
 struct SwiftUIView_Previews: PreviewProvider {

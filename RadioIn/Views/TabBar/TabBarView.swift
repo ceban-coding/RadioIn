@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct TabBarView: View {
-    @State private var isPlaying: Bool = false
     @State private var currentSelection = 1
     @State var expand = false
 
@@ -42,7 +41,6 @@ struct TabBarView: View {
                         Text("Info")
                     }
             }
-            .accentColor(.green)
         })
     }
 }

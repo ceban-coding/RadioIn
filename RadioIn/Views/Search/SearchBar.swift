@@ -1,10 +1,3 @@
-//
-//  SearchBar.swift
-//  RadioIn
-//
-//  Created by Ion Ceban on 7/7/21.
-//
-
 import SwiftUI
 
 struct SearchBar: View {
@@ -55,5 +48,3 @@ struct SearchBar_Previews: PreviewProvider {
             .previewLayout(.sizeThatFits)
     }
 }
-
-
