@@ -10,63 +10,58 @@ import SwiftUI
 struct PlayerView: View {
     
     var radio: RadioIn
-    
     @State var playerPaused : Bool = true
-    
     let radioPlayer = musicPlayer()
-    
+
     var body: some View {
-      
+        
         NavigationView {
             
-                VStack {
-                    StationRow(radio: radio)
-                        .padding()
-                    
-                    Spacer()
-                    
-                    ZStack(alignment: .bottomLeading) {
+            VStack {
+                StationRow(radio: radio)
+                    .padding()
                 
-                        HStack(alignment: .center) {
-                            Button(action: {
-                                 self.playerPaused.toggle()
-                                 if self.playerPaused {
-                                   radioPlayer.pause()
-                                 }
-                                 else {
-                                   playStation()
-                                 }
-                               }) {
-                                 Image( playerPaused ? "Play" : "pause")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 350, height: 175)
-                             }
-                        }
-                        
+                Spacer()
+                
+                ZStack(alignment: .bottomLeading) {
+                    
+                    HStack(alignment: .center) {
                         Button(action: {
+                            self.playerPaused.toggle()
+                            if self.playerPaused {
+                                radioPlayer.pause()
+                            }
+                            else {
+                                playStation()
+                            }
                         }) {
-                            HeartView(isFilled: false)
-                                .font(.title)
+                            Image( playerPaused ? "Play" : "pause")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 350, height: 175)
                         }
                     }
-                    Spacer()
-                    CategoryRow(radio: radio)
-                        .padding(.bottom)
-            
-                    PlayerBar()
+                    
+                    Button(action: {
+                    }) {
+                        HeartView(isFilled: false)
+                            .font(.title)
+                    }
                 }
+                Spacer()
+                CategoryRow(radio: radio)
+                    .padding(.bottom)
+                
+                PlayerBar()
+            }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")
         }
-        
     }
     
     func playStation() {
-        DispatchQueue.main.async {
-            radioPlayer.initPlayer(url: radio.urlString)
-            radioPlayer.play()
-        }
+        radioPlayer.initPlayer(url: radio.urlString)
+        radioPlayer.play()
     }
 }
 

@@ -9,7 +9,8 @@ import SwiftUI
 
 struct PlayerBar: View {
     @State var playerPaused : Bool = true
-    
+    @State var shouldShowModal = false
+  
     var body: some View {
         ZStack {
             HStack {

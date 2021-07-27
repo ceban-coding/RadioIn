@@ -9,12 +9,11 @@ import SwiftUI
 
 struct StationRow: View {
     @State var radio: RadioIn
-    @State private var radioSelected = false
     
     var body: some View {
         
         HStack {
-            ZStack {
+          ZStack {
                 radio.image
                     .resizable()
                     .frame(width: 60, height: 60)
@@ -39,14 +38,9 @@ struct StationRow: View {
                         .padding()
                 }
             }
-            
         }
-        
-        //.background(Blur())
-        .background(Color("TabBarColor"))
+        .background(Color(.systemGray6))
         .cornerRadius(5)
-        .edgesIgnoringSafeArea(.all)
-        
     }
 
 }

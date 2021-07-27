@@ -20,14 +20,14 @@ struct CategoryRow: View {
                 .padding(.top, 5)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(alignment: .top, spacing: 0) {
+                LazyHStack(alignment: .top, spacing: 5) {
                     ForEach(radios) { station in
                      CategoryItem(radios: station)
                     }
                 }
             }
         }
-        .frame(height: 170)
+        .frame(height: 200)
     }
 }
 
