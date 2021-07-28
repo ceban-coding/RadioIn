@@ -20,6 +20,7 @@
 		D658B284269656CB00859A7E /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658B283269656CB00859A7E /* SearchBar.swift */; };
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
+		D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663139E26B2023A00F9DA30 /* audioAnimation.swift */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
 		D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* TabBarView.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
@@ -31,6 +32,7 @@
 		D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F3269C996100AE3ABA /* ModelData.swift */; };
 		D6D9B64726B0A7210048B281 /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64626B0A7210048B281 /* EmptySearchView.swift */; };
 		D6D9B64926B0AB4D0048B281 /* EmptyFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64826B0AB4D0048B281 /* EmptyFavoritesView.swift */; };
+		D6D9B64B26B0CAEA0048B281 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64A26B0CAEA0048B281 /* DataModel.swift */; };
 		D6E52F4926B0547C00E83B8F /* searchViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E52F4826B0547C00E83B8F /* searchViewList.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +66,7 @@
 		D658B283269656CB00859A7E /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		D65E73F02697E2370050E7DB /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
 		D65E73F22697E44F0050E7DB /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
+		D663139E26B2023A00F9DA30 /* audioAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioAnimation.swift; sourceTree = "<group>"; };
 		D66E071926978E85006920D6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
 		D676D05226A1C4250030FC05 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		D685D1E926990431004FDE3F /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
@@ -75,6 +78,7 @@
 		D6D577F3269C996100AE3ABA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		D6D9B64626B0A7210048B281 /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
 		D6D9B64826B0AB4D0048B281 /* EmptyFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFavoritesView.swift; sourceTree = "<group>"; };
+		D6D9B64A26B0CAEA0048B281 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D6E52F3726ADB59200E83B8F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D6E52F3926ADB59200E83B8F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		D6E52F3C26ADB59200E83B8F /* RadioInPlayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioInPlayerWidget.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 				D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */,
 				D6D577F3269C996100AE3ABA /* ModelData.swift */,
 				D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */,
+				D6D9B64A26B0CAEA0048B281 /* DataModel.swift */,
+				D663139E26B2023A00F9DA30 /* audioAnimation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -377,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6E52F4926B0547C00E83B8F /* searchViewList.swift in Sources */,
+				D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */,
 				D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */,
 				D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */,
 				D60530272695F8AC00142D75 /* ContentView.swift in Sources */,
@@ -390,6 +397,7 @@
 				D61C5FEC26A8A47400E9AEC6 /* MusicPlayer.swift in Sources */,
 				D658B284269656CB00859A7E /* SearchBar.swift in Sources */,
 				D6248A5326A9FBE4009C5AF4 /* CategoryItem.swift in Sources */,
+				D6D9B64B26B0CAEA0048B281 /* DataModel.swift in Sources */,
 				D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */,
 				D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */,
 				D6D9B64926B0AB4D0048B281 /* EmptyFavoritesView.swift in Sources */,

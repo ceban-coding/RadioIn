@@ -9,58 +9,73 @@ import SwiftUI
 
 struct PlayerBar: View {
     @State var playerPaused : Bool = true
-    @State var shouldShowModal = false
-  
+    @State var state: SwimplyPlayIndicator.AudioState = .stop
+    
     var body: some View {
+       
+        
         ZStack {
-            HStack {
             
+            Blur(style:.dark)
+            HStack {
                 Button(action: {
                     self.playerPaused.toggle()
+                    if self.playerPaused {
+                        
+                        self.state = .stop
+                    }
+                    else {
+                       
+                        self.state = .play
+                    }
                 }) {
-                     Image( playerPaused ? "playButton" : "pausebar")
+                    Image( playerPaused ? "playButton" : "pausebar")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 35, height: 35)
-                 }
-                               
+                        .frame(width: 40, height: 40)
+                }
                 Spacer()
                 
-                VStack {
+                VStack(alignment: .center) {
                     HStack(alignment: .top) {
                         Text("Retro FM")
                             .font(.body)
-                            .kerning(1.0)
                             .multilineTextAlignment(.center)
-  
+                        
                         Text(Image(systemName:  "info.circle"))
                             .font(.caption)
-                            .padding(.top, 2)
+                        
                     }
-                    Text("Stopped")
-                        .kerning(1.0)
+   
+                    Text( playerPaused ? "Stopped" : "Playing")
                         .font(.subheadline)
                         .multilineTextAlignment(.center)
                         .foregroundColor(.secondary)
+                        .padding(.bottom, 2)
+                   
                 }
-                .padding(5)
+                .padding(.init(top: 2, leading: 20, bottom: 0, trailing: 0))
+                
+                
+                ZStack {
+                    SwimplyPlayIndicator(state: self.$state, color: .green)
+                        .frame(width: 25, height: 25)
+                        .opacity(0.7)
+                }
+                
+                
                 Spacer()
+                
                 Button(action: {}) {
                     HeartView(isFilled: false)
-                        .font(.title2)
+                        .font(.title)
                 }
             }
+            .padding(.leading)
+            .padding(.trailing)
         }
-        .padding(.leading)
-        .padding(.trailing)
-        .edgesIgnoringSafeArea(.all)
         .background(Color("playerBar"))
-        .opacity(0.8)
-        .onTapGesture {
-            withAnimation(.easeIn) {
-                
-            }
-        }
+        .frame(height: 45)
     }
 }
 

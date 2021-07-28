@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct RadioIn: Hashable, Codable, Identifiable{
+struct RadioStation: Hashable, Codable, Identifiable{
     var id: Int
     var title: String
     var subtitle: String

@@ -12,9 +12,7 @@ struct HeartView: View {
     
     var body: some View {
         Image(systemName: isFilled ? "heart.fill" : "heart")
-                    .foregroundColor(isFilled ? .red : .white)
-         
-            
+                    .foregroundColor(isFilled ? .red : .gray)
     }
 }
 

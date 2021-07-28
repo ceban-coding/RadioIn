@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct StationRow: View {
-    @State var radio: RadioIn
+     var radio: RadioStation
     
     var body: some View {
         
@@ -39,7 +39,7 @@ struct StationRow: View {
                 }
             }
         }
-        .background(Color(.systemGray6))
+        .background(Color("TabBarColor"))
         .cornerRadius(5)
     }
 

@@ -8,51 +8,76 @@
 import SwiftUI
 
 struct PlayerView: View {
-    
-    var radio: RadioIn
+    @State var state: SwimplyPlayIndicator.AudioState = .stop
+    var radio: RadioStation
     @State var playerPaused : Bool = true
     let radioPlayer = musicPlayer()
-
+    
     var body: some View {
-        
         NavigationView {
-            
             VStack {
                 StationRow(radio: radio)
                     .padding()
                 
                 Spacer()
+                Spacer()
                 
-                ZStack(alignment: .bottomLeading) {
+                VStack {
                     
                     HStack(alignment: .center) {
                         Button(action: {
                             self.playerPaused.toggle()
                             if self.playerPaused {
                                 radioPlayer.pause()
+                                self.state = .stop
                             }
                             else {
                                 playStation()
+                                self.state = .play
                             }
                         }) {
                             Image( playerPaused ? "Play" : "pause")
                                 .resizable()
+                                .frame(maxWidth: 180, maxHeight: 180)
                                 .scaledToFit()
-                                .frame(width: 350, height: 175)
                         }
+                        
                     }
                     
-                    Button(action: {
-                    }) {
-                        HeartView(isFilled: false)
-                            .font(.title)
+                    
+                    
+                    HStack(alignment: .center, spacing: 70 ) {
+                       
+                            Button(action: {
+                            }) {
+                                HeartView(isFilled: false)
+                                    .font(.title)
+                            }
+                        
+                        
+                        Text( playerPaused ? "Stopped" : "Playing..")
+                            .font(.body)
+                            .foregroundColor(.secondary)
+                            .multilineTextAlignment(.center)
+                            
+                        
+                            SwimplyPlayIndicator(state: self.$state, color: .green)
+                                    .frame(width: 35, height: 30)
+                                .opacity(0.7)
+                        
                     }
+                    
+                    
                 }
-                Spacer()
-                CategoryRow(radio: radio)
-                    .padding(.bottom)
                 
-                PlayerBar()
+                Spacer()
+                Spacer()
+                VStack {
+                    CategoryRow(radio: radio)
+                        .padding(.bottom)
+                    PlayerBar()
+                }
+                
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")

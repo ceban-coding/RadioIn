@@ -7,7 +7,7 @@
 
 import Foundation
 
-var radios: [RadioIn] = load("radio.json")
+var radios: [RadioStation] = load("radio.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -24,7 +24,6 @@ struct EmptySearchView: View {
             
             Text(" Search by station name,\n country or genre.")
                 .font(.title3)
-                .fontWeight(.semibold)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
                 .padding(.horizontal)

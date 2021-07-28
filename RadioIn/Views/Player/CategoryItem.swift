@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct CategoryItem: View {
-    var radios: RadioIn
+    var radios: RadioStation
     
     var body: some View {
         VStack(alignment: .leading){
             radios.image
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 125, height: 125)
-                .scaledToFit()
+                .aspectRatio(contentMode: .fill)
+                .frame(maxWidth: 125, maxHeight: 125)
                 .cornerRadius(8)
             Text(radios.title)
                 .foregroundColor(.primary)

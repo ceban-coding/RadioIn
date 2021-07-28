@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryRow: View {
-    var radio: RadioIn
+    var radio: RadioStation
     let radioPlayer = musicPlayer()
     
     var body: some View {
@@ -27,7 +27,7 @@ struct CategoryRow: View {
                 }
             }
         }
-        .frame(height: 200)
+        .frame(maxHeight: 200)
     }
 }
 
