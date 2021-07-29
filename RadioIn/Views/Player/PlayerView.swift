@@ -13,6 +13,7 @@ struct PlayerView: View {
     @State var playerPaused : Bool = true
     let radioPlayer = musicPlayer()
     
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -38,34 +39,32 @@ struct PlayerView: View {
                         }) {
                             Image( playerPaused ? "Play" : "pause")
                                 .resizable()
-                                .frame(maxWidth: 180, maxHeight: 180)
                                 .scaledToFit()
+                                .frame(maxWidth: 180, maxHeight: 180)
+                                
                         }
                         
                     }
                     
-                    
-                    
-                    HStack(alignment: .center, spacing: 70 ) {
+                    HStack(alignment: .center ) {
                        
                             Button(action: {
                             }) {
                                 HeartView(isFilled: false)
                                     .font(.title)
                             }
-                        
+                         Spacer()
                         
                         Text( playerPaused ? "Stopped" : "Playing..")
                             .font(.body)
                             .foregroundColor(.secondary)
                             .multilineTextAlignment(.center)
                             
-                        
-                            SwimplyPlayIndicator(state: self.$state, color: .green)
+                        Spacer()
+                        SwimplyPlayIndicator(state: self.$state, color: .green)
                                     .frame(width: 35, height: 30)
-                                .opacity(0.7)
-                        
                     }
+                    .padding(.init(top: 0, leading: 40, bottom: 0, trailing: 40))
                     
                     
                 }
@@ -83,6 +82,7 @@ struct PlayerView: View {
             .navigationBarTitle("Player")
         }
     }
+    
     
     func playStation() {
         radioPlayer.initPlayer(url: radio.urlString)

@@ -6,23 +6,27 @@
 //
 
 import SwiftUI
+import SwiftUIListSeparator
 
 struct searchViewList: View {
     @State private var searchText = ""
     
     var body: some View {
         NavigationView {
-             
-            List {
-                ForEach(radios) {
-                    
-                    stations in
-                StationRow(radio: stations)
+                List {
+                    ForEach(radios) { stations in
+                    StationRow(radio: stations)
+                        .padding(4)
+                        
+                    }
+                    .listSeparatorStyle(.none)
+                    .listRowInsets(EdgeInsets())
+ 
                 }
-            }
+                .padding(.top, 10)
+                .navigationTitle("Search")
+                .navigationBarTitleDisplayMode(.inline)
             
-            .navigationTitle("Search")
-            .navigationBarTitleDisplayMode(.inline)
             
         }
     }

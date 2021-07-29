@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct PlayerBar: View {
+   
     @State var playerPaused : Bool = true
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     
     var body: some View {
-       
+        
         
         ZStack {
-            
             Blur(style:.dark)
             HStack {
                 Button(action: {
@@ -25,51 +25,52 @@ struct PlayerBar: View {
                         self.state = .stop
                     }
                     else {
-                       
+                        
                         self.state = .play
                     }
                 }) {
                     Image( playerPaused ? "playButton" : "pausebar")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 40, height: 40)
+                        .frame(width: 30, height: 30)
+                    
                 }
                 Spacer()
-                
-                VStack(alignment: .center) {
-                    HStack(alignment: .top) {
-                        Text("Retro FM")
-                            .font(.body)
-                            .multilineTextAlignment(.center)
-                        
-                        Text(Image(systemName:  "info.circle"))
-                            .font(.caption)
-                        
-                    }
-   
-                    Text( playerPaused ? "Stopped" : "Playing")
-                        .font(.subheadline)
-                        .multilineTextAlignment(.center)
-                        .foregroundColor(.secondary)
-                        .padding(.bottom, 2)
-                   
-                }
-                .padding(.init(top: 2, leading: 20, bottom: 0, trailing: 0))
-                
                 
                 ZStack {
+                    VStack(alignment: .center) {
+                        HStack(alignment: .top) {
+                            Text("Retro FM")
+                                .font(.body)
+                                .multilineTextAlignment(.center)
+                                
+                            Text(Image(systemName:  "info.circle"))
+                                .font(.caption)
+        
+                        }
+                        
+                        Text( playerPaused ? "Stopped" : "Playing")
+                            .font(.subheadline)
+                            .multilineTextAlignment(.center)
+                            .foregroundColor(.secondary)
+                            .padding(.bottom, 2)
+                        
+                    }
+                    .padding(.init(top: 2, leading: 50, bottom: 0, trailing: 0))
+                }
+ 
+                
                     SwimplyPlayIndicator(state: self.$state, color: .green)
                         .frame(width: 25, height: 25)
-                        .opacity(0.7)
-                }
+                        .padding(.leading)
                 
-                
+
                 Spacer()
-                
                 Button(action: {}) {
                     HeartView(isFilled: false)
-                        .font(.title)
+                        .font(.system(size: 27))
                 }
+                
             }
             .padding(.leading)
             .padding(.trailing)

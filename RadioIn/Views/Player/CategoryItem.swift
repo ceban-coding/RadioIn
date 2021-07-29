@@ -16,7 +16,7 @@ struct CategoryItem: View {
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: 125, maxHeight: 125)
+                .frame(maxWidth: 100, maxHeight: 100)
                 .cornerRadius(8)
             Text(radios.title)
                 .foregroundColor(.primary)

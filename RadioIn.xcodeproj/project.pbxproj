@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,12 +21,13 @@
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
 		D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663139E26B2023A00F9DA30 /* audioAnimation.swift */; };
+		D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */ = {isa = PBXBuildFile; productRef = D66313A526B222C200F9DA30 /* SwiftUIListSeparator */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
 		D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* TabBarView.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
 		D6B203BE269CD1F300E2D9B0 /* radio.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B203BD269CD1F300E2D9B0 /* radio.json */; };
 		D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B203BF269CF62400E2D9B0 /* HeartView.swift */; };
-		D6C52D1A26A0FB6E0062DB6B /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */; };
+		D6C52D1A26A0FB6E0062DB6B /* Blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C52D1926A0FB6E0062DB6B /* Blur.swift */; };
 		D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7FAE826964A5F0000532B /* SearchView.swift */; };
 		D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */; };
 		D6D577F4269C996100AE3ABA /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D577F3269C996100AE3ABA /* ModelData.swift */; };
@@ -72,7 +73,7 @@
 		D685D1E926990431004FDE3F /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
 		D6B203BD269CD1F300E2D9B0 /* radio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = radio.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D6B203BF269CF62400E2D9B0 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
-		D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		D6C52D1926A0FB6E0062DB6B /* Blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blur.swift; sourceTree = "<group>"; };
 		D6C7FAE826964A5F0000532B /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioIn.swift; sourceTree = "<group>"; };
 		D6D577F3269C996100AE3ABA /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */,
 				488B12DCE1C6E06C044CDA29 /* Pods_RadioIn.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +146,7 @@
 			children = (
 				D66E07202697B58A006920D6 /* App */,
 				D6C7FAE726964A4B0000532B /* Views */,
+				D66313A126B219A500F9DA30 /* Modifiers */,
 				D66E071726973BD4006920D6 /* Model */,
 				D6D577F5269C9A5100AE3ABA /* Resources */,
 				D605302A2695F8AE00142D75 /* Preview Content */,
@@ -159,15 +162,22 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		D66313A126B219A500F9DA30 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				D663139E26B2023A00F9DA30 /* audioAnimation.swift */,
+				D6C52D1926A0FB6E0062DB6B /* Blur.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		D66E071726973BD4006920D6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				D61C5FEB26A8A47400E9AEC6 /* MusicPlayer.swift */,
 				D6D577F1269C8A7D00AE3ABA /* RadioIn.swift */,
 				D6D577F3269C996100AE3ABA /* ModelData.swift */,
-				D6C52D1926A0FB6E0062DB6B /* Modifiers.swift */,
 				D6D9B64A26B0CAEA0048B281 /* DataModel.swift */,
-				D663139E26B2023A00F9DA30 /* audioAnimation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +292,7 @@
 			);
 			name = RadioIn;
 			packageProductDependencies = (
+				D66313A526B222C200F9DA30 /* SwiftUIListSeparator */,
 			);
 			productName = RadioIn;
 			productReference = D60530212695F8AC00142D75 /* RadioIn.app */;
@@ -311,6 +322,7 @@
 			);
 			mainGroup = D60530182695F8AC00142D75;
 			packageReferences = (
+				D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */,
 			);
 			productRefGroup = D60530222695F8AC00142D75 /* Products */;
 			projectDirPath = "";
@@ -403,7 +415,7 @@
 				D6D9B64926B0AB4D0048B281 /* EmptyFavoritesView.swift in Sources */,
 				D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */,
 				D6248A5526A9FC78009C5AF4 /* CategoryRow.swift in Sources */,
-				D6C52D1A26A0FB6E0062DB6B /* Modifiers.swift in Sources */,
+				D6C52D1A26A0FB6E0062DB6B /* Blur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +608,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SchmidtyApps/SwiftUIListSeparator.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D66313A526B222C200F9DA30 /* SwiftUIListSeparator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */;
+			productName = SwiftUIListSeparator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D60530192695F8AC00142D75 /* Project object */;
 }

@@ -13,26 +13,26 @@ struct FavoritesView: View {
     var body: some View {
         NavigationView {
             
+//            VStack {
+//                //EmptyFavoritesView()
+//                //PlayerBar()
+//            }
             VStack {
-                EmptyFavoritesView()
+                ScrollView {
+                    LazyVStack {
+                        ForEach(radios) { station in
+                            ZStack {
+                                NavigationLink(
+                                    destination: PlayerView(radio: station)) {
+                                    StationRow(radio: station)
+                                }
+                            }
+                        }
+                    }
+                    .padding(10)
+                }
                 PlayerBar()
             }
-//            VStack {
-//                ScrollView {
-//                    LazyVStack {
-//                        ForEach(radios) { station in
-//                            ZStack {
-//                                NavigationLink(
-//                                    destination: PlayerView(radio: station)) {
-//                                    StationRow(radio: station)
-//                                }
-//                            }
-//                        }
-//                    }
-//                    .padding(10)
-//                }
-//                PlayerBar()
-//            }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Favorites")
         }

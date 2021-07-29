@@ -27,7 +27,7 @@ struct CategoryRow: View {
                 }
             }
         }
-        .frame(maxHeight: 200)
+        .frame(maxHeight: 160)
     }
 }
 
