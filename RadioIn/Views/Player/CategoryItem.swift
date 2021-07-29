@@ -16,10 +16,10 @@ struct CategoryItem: View {
                 .renderingMode(.original)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: 100, maxHeight: 100)
+                .frame(maxWidth: 85, maxHeight: 85)
                 .cornerRadius(8)
             Text(radios.title)
-                .foregroundColor(.primary)
+                .foregroundColor(.secondary)
                 .font(.caption)
         }
         .padding(.leading, 15)

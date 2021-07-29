@@ -18,9 +18,10 @@ struct EmptySearchView: View {
                     .opacity(0.8)
                 Text("Search")
                     .font(.title)
+                    .fontWeight(.regular)
                     .foregroundColor(.gray)
             }
-            .padding()
+            .padding(5)
             
             Text(" Search by station name,\n country or genre.")
                 .font(.title3)

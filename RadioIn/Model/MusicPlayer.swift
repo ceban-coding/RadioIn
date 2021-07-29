@@ -16,7 +16,6 @@ class musicPlayer {
     var playerItem: AVPlayerItem!
     
     func initPlayer(url: String) {
-        
         guard let url = URL.init(string: url) else { return }
         let playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem)
@@ -26,14 +25,13 @@ class musicPlayer {
     func playAudioBackground() {
         do {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
-            print("Playback OK")
+            //print("Playback OK")
             try AVAudioSession.sharedInstance().setActive(true)
-            print("Session is Active")
+            //print("Session is Active")
         } catch {
             print(error)
         }
     }
-    
     
     func pause(){
         if player.isPlaying {
@@ -50,7 +48,6 @@ class musicPlayer {
     func setupRemoteTransportControls() {
         // Get the shared MPRemoteCommandCenter
         let commandCenter = MPRemoteCommandCenter.shared()
-
         // Add handler for Play Command
         commandCenter.playCommand.addTarget { [unowned self] event in
             if self.player.rate == 0.0 {
@@ -59,7 +56,6 @@ class musicPlayer {
             }
             return .commandFailed
         }
-
         // Add handler for Pause Command
         commandCenter.pauseCommand.addTarget { [unowned self] event in
             if self.player.rate == 1.0 {
@@ -74,21 +70,21 @@ class musicPlayer {
         // Define Now Playing Info
         var nowPlayingInfo = [String : Any]()
         nowPlayingInfo[MPMediaItemPropertyTitle] = "Radio In"
-
+        
         if let image = UIImage(named: "ri") {
             nowPlayingInfo[MPMediaItemPropertyArtwork] =
                 MPMediaItemArtwork(boundsSize: image.size) { size in
                     return image
-            }
+                }
         }
         // Set the metadata
         MPNowPlayingInfoCenter.default().nowPlayingInfo = nowPlayingInfo
     }
+    
 }
 
 
 extension AVPlayer {
-    
     var isPlaying: Bool {
         if (self.rate != 0 && self.error == nil) {
             return true

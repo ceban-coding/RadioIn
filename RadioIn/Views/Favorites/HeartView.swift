@@ -12,17 +12,18 @@ struct HeartView: View {
     
     var body: some View {
         Image(systemName: isFilled ? "heart.fill" : "heart")
-                    .foregroundColor(isFilled ? .red : .gray)
+            .foregroundColor(isFilled ? .red : .white)
+            .opacity(0.8)
     }
 }
 
 struct HeartView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-                    HeartView(isFilled: true)
-                    HeartView(isFilled: false)
-                }
-                .padding()
-                .previewLayout(.sizeThatFits)
+            HeartView(isFilled: true)
+            HeartView(isFilled: false)
+        }
+        .padding()
+        .previewLayout(.sizeThatFits)
     }
 }

@@ -12,6 +12,7 @@ struct PlayerBar: View {
     @State var playerPaused : Bool = true
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     
+    
     var body: some View {
         
         

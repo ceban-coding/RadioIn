@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		488B12DCE1C6E06C044CDA29 /* Pods_RadioIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */; };
 		D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530242695F8AC00142D75 /* RadioInApp.swift */; };
 		D60530272695F8AC00142D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530262695F8AC00142D75 /* ContentView.swift */; };
 		D60530292695F8AD00142D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60530282695F8AD00142D75 /* Assets.xcassets */; };
@@ -21,7 +20,7 @@
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
 		D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663139E26B2023A00F9DA30 /* audioAnimation.swift */; };
-		D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */ = {isa = PBXBuildFile; productRef = D66313A526B222C200F9DA30 /* SwiftUIListSeparator */; };
+		D66313A626B222C200F9DA30 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
 		D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* TabBarView.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
@@ -51,8 +50,6 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioIn.debug.xcconfig"; path = "Target Support Files/Pods-RadioIn/Pods-RadioIn.debug.xcconfig"; sourceTree = "<group>"; };
-		7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RadioIn.release.xcconfig"; path = "Target Support Files/Pods-RadioIn/Pods-RadioIn.release.xcconfig"; sourceTree = "<group>"; };
 		D60530212695F8AC00142D75 /* RadioIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60530242695F8AC00142D75 /* RadioInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioInApp.swift; sourceTree = "<group>"; };
 		D60530262695F8AC00142D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,13 +77,8 @@
 		D6D9B64626B0A7210048B281 /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
 		D6D9B64826B0AB4D0048B281 /* EmptyFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFavoritesView.swift; sourceTree = "<group>"; };
 		D6D9B64A26B0CAEA0048B281 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
-		D6E52F3726ADB59200E83B8F /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		D6E52F3926ADB59200E83B8F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		D6E52F3C26ADB59200E83B8F /* RadioInPlayerWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioInPlayerWidget.swift; sourceTree = "<group>"; };
-		D6E52F3E26ADB59600E83B8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6E52F4026ADB59600E83B8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D6E52F4826B0547C00E83B8F /* searchViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewList.swift; sourceTree = "<group>"; };
-		E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RadioIn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */,
-				488B12DCE1C6E06C044CDA29 /* Pods_RadioIn.framework in Frameworks */,
+				D66313A626B222C200F9DA30 /* BuildFile in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,20 +96,9 @@
 		0F99642D4BEC452108BB3D43 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E6AAD70EED6C975C9E1CB4AB /* Pods_RadioIn.framework */,
-				D6E52F3726ADB59200E83B8F /* WidgetKit.framework */,
 				D6E52F3926ADB59200E83B8F /* SwiftUI.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2390D09E0CCF3B581C2253D5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */,
-				7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */,
-			);
-			path = Pods;
 			sourceTree = "<group>";
 		};
 		D60530182695F8AC00142D75 = {
@@ -126,9 +106,7 @@
 			children = (
 				D6B203BD269CD1F300E2D9B0 /* radio.json */,
 				D60530232695F8AC00142D75 /* RadioIn */,
-				D6E52F3B26ADB59200E83B8F /* RadioInPlayerWidget */,
 				D60530222695F8AC00142D75 /* Products */,
-				2390D09E0CCF3B581C2253D5 /* Pods */,
 				0F99642D4BEC452108BB3D43 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -262,16 +240,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		D6E52F3B26ADB59200E83B8F /* RadioInPlayerWidget */ = {
-			isa = PBXGroup;
-			children = (
-				D6E52F3C26ADB59200E83B8F /* RadioInPlayerWidget.swift */,
-				D6E52F3E26ADB59600E83B8F /* Assets.xcassets */,
-				D6E52F4026ADB59600E83B8F /* Info.plist */,
-			);
-			path = RadioInPlayerWidget;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -279,11 +247,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D60530302695F8AE00142D75 /* Build configuration list for PBXNativeTarget "RadioIn" */;
 			buildPhases = (
-				E2471EACE5F6187CD106A80E /* [CP] Check Pods Manifest.lock */,
 				D605301D2695F8AC00142D75 /* Sources */,
 				D605301E2695F8AC00142D75 /* Frameworks */,
 				D605301F2695F8AC00142D75 /* Resources */,
-				D2A215AADBD2749F3728DD6F /* [CP] Embed Pods Frameworks */,
 				D6E52F4426ADB59600E83B8F /* Embed App Extensions */,
 			);
 			buildRules = (
@@ -292,7 +258,7 @@
 			);
 			name = RadioIn;
 			packageProductDependencies = (
-				D66313A526B222C200F9DA30 /* SwiftUIListSeparator */,
+				D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */,
 			);
 			productName = RadioIn;
 			productReference = D60530212695F8AC00142D75 /* RadioIn.app */;
@@ -322,7 +288,7 @@
 			);
 			mainGroup = D60530182695F8AC00142D75;
 			packageReferences = (
-				D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */,
+				D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */,
 			);
 			productRefGroup = D60530222695F8AC00142D75 /* Products */;
 			projectDirPath = "";
@@ -346,48 +312,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		D2A215AADBD2749F3728DD6F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RadioIn/Pods-RadioIn-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E2471EACE5F6187CD106A80E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-RadioIn-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D605301D2695F8AC00142D75 /* Sources */ = {
@@ -540,7 +464,6 @@
 		};
 		D60530312695F8AE00142D75 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 25BB68B4AF901954F672BADE /* Pods-RadioIn.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -564,7 +487,6 @@
 		};
 		D60530322695F8AE00142D75 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EEC319259B24D71B617F34B /* Pods-RadioIn.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -610,7 +532,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */ = {
+		D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SchmidtyApps/SwiftUIListSeparator.git";
 			requirement = {
@@ -621,9 +543,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D66313A526B222C200F9DA30 /* SwiftUIListSeparator */ = {
+		D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */;
+			package = D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */;
 			productName = SwiftUIListSeparator;
 		};
 /* End XCSwiftPackageProductDependency section */

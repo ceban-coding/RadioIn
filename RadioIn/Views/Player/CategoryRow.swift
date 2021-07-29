@@ -14,7 +14,9 @@ struct CategoryRow: View {
     var body: some View {
         VStack(alignment: .leading) {
             Text("Favorites")
-                .foregroundColor(.secondary)
+                .fontWeight(.regular)
+                .foregroundColor(.white)
+                .opacity(0.8)
                 .font(.headline)
                 .padding(.leading, 15)
                 .padding(.top, 5)
@@ -25,9 +27,10 @@ struct CategoryRow: View {
                      CategoryItem(radios: station)
                     }
                 }
+                .padding(.trailing, 5)
             }
         }
-        .frame(maxHeight: 160)
+        .frame(maxHeight: 155)
     }
 }
 
