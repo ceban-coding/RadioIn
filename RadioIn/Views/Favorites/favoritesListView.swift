@@ -1,22 +1,22 @@
 //
-//  searchViewList.swift
+//  favoritesListView.swift
 //  RadioIn
 //
-//  Created by Ion Ceban on 7/27/21.
+//  Created by Ion Ceban on 7/30/21.
 //
 
 import SwiftUI
 import SwiftUIListSeparator
 
-struct searchViewList: View {
-    
-    @State var text = ""
+struct favoritesListView: View {
     var body: some View {
-       
+        
         VStack {
-            SearchBar(text: $text)
-                .padding(.init(top: 30, leading: 15, bottom: 10, trailing: 15))
-                
+            VStack{
+                Text("Favorites")
+                    .font(.title3)
+            }
+                .frame(height: 50)
             
             List {
                 ForEach(radios) { stations in
@@ -24,17 +24,15 @@ struct searchViewList: View {
                         .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
                 }
                 .listRowInsets(EdgeInsets())
-                .listSeparatorStyle(.none)
+                
             }
             PlayerBar()
         }
     }
 }
 
-
-struct searchViewList_Previews: PreviewProvider {
+struct favoritesListView_Previews: PreviewProvider {
     static var previews: some View {
-        searchViewList()
+        favoritesListView()
     }
 }
-

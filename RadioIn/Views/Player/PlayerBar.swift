@@ -8,16 +8,12 @@
 import SwiftUI
 
 struct PlayerBar: View {
-   
     @State var playerPaused : Bool = true
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     
-    
     var body: some View {
         
-        
         ZStack {
-            Blur(style:.dark)
             HStack {
                 Button(action: {
                     self.playerPaused.toggle()
@@ -44,7 +40,6 @@ struct PlayerBar: View {
                             Text("Retro FM")
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                                
                             Text(Image(systemName:  "info.circle"))
                                 .font(.caption)
         
@@ -76,7 +71,7 @@ struct PlayerBar: View {
             .padding(.leading)
             .padding(.trailing)
         }
-        .background(Color("playerBar"))
+        .background(Color.accentColor)
         .frame(height: 45)
     }
 }

@@ -13,7 +13,7 @@ struct ContentView: View {
 
     
     var body: some View {
-        ZStack(alignment: Alignment(horizontal: .center, vertical: .bottom), content: {
+     
             
             TabView(selection: $currentSelection) {
                 FavoritesView()
@@ -41,7 +41,6 @@ struct ContentView: View {
                         Text("Info")
                     }
             }
-        })
     }
 }
 

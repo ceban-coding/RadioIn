@@ -12,10 +12,9 @@ struct FavoritesView: View {
     
     var body: some View {
         NavigationView {
-            
             VStack {
-                //ListView()
-                EmptyFavoritesView()
+                ListView()
+                //EmptyFavoritesView()
                 PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -33,7 +32,7 @@ struct FavoritesView_Previews: PreviewProvider {
 struct ListView: View {
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 8) {
                 ForEach(radios) { station in
                     ZStack {
                         NavigationLink(

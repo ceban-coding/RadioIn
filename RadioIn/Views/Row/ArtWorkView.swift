@@ -20,6 +20,7 @@ struct ArtWorkView: View {
                 .resizable()
             }
           }
+          .background(Color("TextColorRow"))
         }
       }
     

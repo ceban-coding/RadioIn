@@ -22,12 +22,12 @@ struct CategoryRow: View {
                 .padding(.top, 5)
             
             ScrollView(.horizontal, showsIndicators: false) {
-                LazyHStack(alignment: .top, spacing: 5) {
+                LazyHStack(alignment: .top, spacing: 0) {
                     ForEach(radios) { station in
                      CategoryItem(radios: station)
                     }
                 }
-                .padding(.trailing, 5)
+                .padding(.trailing, 10)
             }
         }
         .frame(maxHeight: 155)

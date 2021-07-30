@@ -14,8 +14,7 @@ struct SearchView: View {
         NavigationView {
             VStack {
                 SearchBar(text: $text)
-                    .padding(.init(top: 12, leading: 10, bottom: 5, trailing: 10))
-                
+                    .padding(.init(top: 12, leading: 15, bottom: 5, trailing: 15))
                 SearchingListView()
                 PlayerBar()
             }
@@ -35,16 +34,14 @@ struct SwiftUIView_Previews: PreviewProvider {
 
 
 
-struct SearchingListView: View {
+struct SearchingListView: View { 
+    
     var body: some View {
         ScrollView {
-            LazyVStack {
+            LazyVStack(spacing: 8) {
                 ForEach(radios) { station in
                     ZStack {
                         StationRow(radio: station)
-                            .onTapGesture {
-                                
-                            }
                     }
                 }
             }

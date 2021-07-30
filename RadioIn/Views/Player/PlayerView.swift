@@ -21,8 +21,7 @@ struct PlayerView: View {
                     .padding()
                 
                 Spacer()
-                Spacer()
-                
+            
                 VStack {
                     
                     HStack(alignment: .center) {
@@ -40,7 +39,7 @@ struct PlayerView: View {
                             Image( isPlaying ? "pause" : "Play")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(maxWidth: 150, maxHeight: 150)
+                                .frame(maxWidth: 160, maxHeight: 160)
                         }
                     }
                     
@@ -69,6 +68,7 @@ struct PlayerView: View {
                 CategoryRow(radio: radio)
                 PlayerBar()       
             }
+           
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")
         }
