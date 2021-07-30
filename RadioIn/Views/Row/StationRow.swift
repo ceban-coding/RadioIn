@@ -13,14 +13,10 @@ struct StationRow: View {
     var body: some View {
         
         HStack {
-          ZStack {
-                radio.image
-                    .resizable()
-                    .frame(width: 60, height: 60)
-                    .scaledToFill()
-            }
-            HStack {
-               
+            ArtWorkView(image: radio.image)
+                    .frame(width: 65, height: 65)
+                    .aspectRatio(contentMode: .fill)
+                    
                 VStack(alignment: .leading, spacing: 5) {
                     Text(radio.title)
                         .font(.title3)
@@ -37,7 +33,7 @@ struct StationRow: View {
                     HeartView(isFilled: true)
                         .padding()
                 }
-            }
+            
         }
         .background(Color("TabBarColor"))
         .cornerRadius(5)

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530242695F8AC00142D75 /* RadioInApp.swift */; };
-		D60530272695F8AC00142D75 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D60530262695F8AC00142D75 /* ContentView.swift */; };
 		D60530292695F8AD00142D75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D60530282695F8AD00142D75 /* Assets.xcassets */; };
 		D605302C2695F8AE00142D75 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D605302B2695F8AE00142D75 /* Preview Assets.xcassets */; };
 		D60530362695FC3300142D75 /* LaunchScreenView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D60530352695FC3300142D75 /* LaunchScreenView.storyboard */; };
@@ -20,9 +19,10 @@
 		D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F02697E2370050E7DB /* PlayerView.swift */; };
 		D65E73F32697E44F0050E7DB /* info.swift in Sources */ = {isa = PBXBuildFile; fileRef = D65E73F22697E44F0050E7DB /* info.swift */; };
 		D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D663139E26B2023A00F9DA30 /* audioAnimation.swift */; };
-		D66313A626B222C200F9DA30 /* BuildFile in Frameworks */ = {isa = PBXBuildFile; productRef = D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */; };
+		D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */ = {isa = PBXBuildFile; productRef = D66313A526B222C200F9DA30 /* SwiftUIListSeparator */; };
 		D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66E071926978E85006920D6 /* FavoritesView.swift */; };
-		D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* TabBarView.swift */; };
+		D674930526B452B200CE6AC2 /* ArtWorkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D674930426B452B200CE6AC2 /* ArtWorkView.swift */; };
+		D676D05326A1C4250030FC05 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D676D05226A1C4250030FC05 /* ContentView.swift */; };
 		D685D1EA26990431004FDE3F /* PlayerBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = D685D1E926990431004FDE3F /* PlayerBar.swift */; };
 		D6B203BE269CD1F300E2D9B0 /* radio.json in Resources */ = {isa = PBXBuildFile; fileRef = D6B203BD269CD1F300E2D9B0 /* radio.json */; };
 		D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6B203BF269CF62400E2D9B0 /* HeartView.swift */; };
@@ -52,7 +52,6 @@
 /* Begin PBXFileReference section */
 		D60530212695F8AC00142D75 /* RadioIn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RadioIn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D60530242695F8AC00142D75 /* RadioInApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioInApp.swift; sourceTree = "<group>"; };
-		D60530262695F8AC00142D75 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		D60530282695F8AD00142D75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D605302B2695F8AE00142D75 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D605302D2695F8AE00142D75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,7 +65,8 @@
 		D65E73F22697E44F0050E7DB /* info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = info.swift; sourceTree = "<group>"; };
 		D663139E26B2023A00F9DA30 /* audioAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = audioAnimation.swift; sourceTree = "<group>"; };
 		D66E071926978E85006920D6 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
-		D676D05226A1C4250030FC05 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		D674930426B452B200CE6AC2 /* ArtWorkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtWorkView.swift; sourceTree = "<group>"; };
+		D676D05226A1C4250030FC05 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContentView.swift; path = TabBar/ContentView.swift; sourceTree = "<group>"; };
 		D685D1E926990431004FDE3F /* PlayerBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerBar.swift; sourceTree = "<group>"; };
 		D6B203BD269CD1F300E2D9B0 /* radio.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = radio.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.json; };
 		D6B203BF269CF62400E2D9B0 /* HeartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D66313A626B222C200F9DA30 /* BuildFile in Frameworks */,
+				D66313A626B222C200F9DA30 /* SwiftUIListSeparator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				D6C7FAE826964A5F0000532B /* SearchView.swift */,
-				D658B2812696518C00859A7E /* StationRow.swift */,
 				D658B283269656CB00859A7E /* SearchBar.swift */,
 				D6E52F4826B0547C00E83B8F /* searchViewList.swift */,
 				D6D9B64626B0A7210048B281 /* EmptySearchView.swift */,
@@ -193,12 +192,13 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		D676D05126A1C4150030FC05 /* TabBar */ = {
+		D674930326B4525B00CE6AC2 /* Row */ = {
 			isa = PBXGroup;
 			children = (
-				D676D05226A1C4250030FC05 /* TabBarView.swift */,
+				D658B2812696518C00859A7E /* StationRow.swift */,
+				D674930426B452B200CE6AC2 /* ArtWorkView.swift */,
 			);
-			path = TabBar;
+			path = Row;
 			sourceTree = "<group>";
 		};
 		D685D1E12698E23D004FDE3F /* Player */ = {
@@ -223,8 +223,8 @@
 		D6C7FAE726964A4B0000532B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D60530262695F8AC00142D75 /* ContentView.swift */,
-				D676D05126A1C4150030FC05 /* TabBar */,
+				D676D05226A1C4250030FC05 /* ContentView.swift */,
+				D674930326B4525B00CE6AC2 /* Row */,
 				D66E071826978E65006920D6 /* Search */,
 				D66E071D2697A7D7006920D6 /* Favorites */,
 				D685D1E12698E23D004FDE3F /* Player */,
@@ -258,7 +258,7 @@
 			);
 			name = RadioIn;
 			packageProductDependencies = (
-				D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */,
+				D66313A526B222C200F9DA30 /* SwiftUIListSeparator */,
 			);
 			productName = RadioIn;
 			productReference = D60530212695F8AC00142D75 /* RadioIn.app */;
@@ -288,7 +288,7 @@
 			);
 			mainGroup = D60530182695F8AC00142D75;
 			packageReferences = (
-				D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */,
+				D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */,
 			);
 			productRefGroup = D60530222695F8AC00142D75 /* Products */;
 			projectDirPath = "";
@@ -322,7 +322,6 @@
 				D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */,
 				D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */,
 				D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */,
-				D60530272695F8AC00142D75 /* ContentView.swift in Sources */,
 				D658B2822696518C00859A7E /* StationRow.swift in Sources */,
 				D66E071A26978E85006920D6 /* FavoritesView.swift in Sources */,
 				D6D9B64726B0A7210048B281 /* EmptySearchView.swift in Sources */,
@@ -332,12 +331,13 @@
 				D65E73F12697E2370050E7DB /* PlayerView.swift in Sources */,
 				D61C5FEC26A8A47400E9AEC6 /* MusicPlayer.swift in Sources */,
 				D658B284269656CB00859A7E /* SearchBar.swift in Sources */,
+				D674930526B452B200CE6AC2 /* ArtWorkView.swift in Sources */,
 				D6248A5326A9FBE4009C5AF4 /* CategoryItem.swift in Sources */,
 				D6D9B64B26B0CAEA0048B281 /* DataModel.swift in Sources */,
 				D60530252695F8AC00142D75 /* RadioInApp.swift in Sources */,
 				D6C7FAE926964A5F0000532B /* SearchView.swift in Sources */,
 				D6D9B64926B0AB4D0048B281 /* EmptyFavoritesView.swift in Sources */,
-				D676D05326A1C4250030FC05 /* TabBarView.swift in Sources */,
+				D676D05326A1C4250030FC05 /* ContentView.swift in Sources */,
 				D6248A5526A9FC78009C5AF4 /* CategoryRow.swift in Sources */,
 				D6C52D1A26A0FB6E0062DB6B /* Blur.swift in Sources */,
 			);
@@ -532,7 +532,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */ = {
+		D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SchmidtyApps/SwiftUIListSeparator.git";
 			requirement = {
@@ -543,9 +543,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		D66313A526B222C200F9DA30 /* SwiftPackageProductDependency */ = {
+		D66313A526B222C200F9DA30 /* SwiftUIListSeparator */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D66313A426B222C200F9DA30 /* RemoteSwiftPackageReference */;
+			package = D66313A426B222C200F9DA30 /* XCRemoteSwiftPackageReference "SwiftUIListSeparator" */;
 			productName = SwiftUIListSeparator;
 		};
 /* End XCSwiftPackageProductDependency section */

@@ -9,12 +9,11 @@ import SwiftUI
 
 struct CategoryItem: View {
     var radios: RadioStation
+   
     
     var body: some View {
         VStack(alignment: .leading){
-            radios.image
-                .renderingMode(.original)
-                .resizable()
+            ArtWorkView(image: radios.image)
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: 85, maxHeight: 85)
                 .cornerRadius(8)

@@ -13,24 +13,9 @@ struct FavoritesView: View {
     var body: some View {
         NavigationView {
             
-//            VStack {
-//                //EmptyFavoritesView()
-//                //PlayerBar()
-//            }
             VStack {
-                ScrollView {
-                    LazyVStack {
-                        ForEach(radios) { station in
-                            ZStack {
-                                NavigationLink(
-                                    destination: PlayerView(radio: station)) {
-                                    StationRow(radio: station)
-                                }
-                            }
-                        }
-                    }
-                    .padding(10)
-                }
+                //ListView()
+                EmptyFavoritesView()
                 PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
@@ -40,8 +25,25 @@ struct FavoritesView: View {
 }
 
 struct FavoritesView_Previews: PreviewProvider {
-    
     static var previews: some View {
         FavoritesView()
+    }
+}
+
+struct ListView: View {
+    var body: some View {
+        ScrollView {
+            LazyVStack {
+                ForEach(radios) { station in
+                    ZStack {
+                        NavigationLink(
+                            destination: PlayerView(radio: station)) {
+                            StationRow(radio: station)
+                        }
+                    }
+                }
+            }
+            .padding(10)
+        }
     }
 }
