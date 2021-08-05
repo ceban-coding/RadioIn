@@ -18,6 +18,7 @@ struct SearchView: View {
                 SearchingListView()
                 PlayerBar()
             }
+            .ignoresSafeArea(.keyboard)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Search")
         }
@@ -38,7 +39,7 @@ struct SearchingListView: View {
     
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 8) {
+            VStack(spacing: 8) {
                 ForEach(radios) { station in
                     ZStack {
                         StationRow(radio: station)

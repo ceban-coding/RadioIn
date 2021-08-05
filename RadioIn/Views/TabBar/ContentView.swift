@@ -7,35 +7,40 @@
 
 import SwiftUI
 
-struct ContentView: View {
-    @State private var currentSelection = 1
-    @State var expand = false
+enum Tab {
+    case favorites
+    case search
+    case player
+    case info
+}
 
+
+struct ContentView: View {
+    @State private var selection: Tab = .favorites
+    @State var expand = false
     
     var body: some View {
-     
-            
-            TabView(selection: $currentSelection) {
+            TabView(selection: $selection) {
                 FavoritesView()
-                    .tag(1)
+                    .tag(Tab.favorites)
                     .tabItem {
                         Image(systemName: "suit.heart.fill")
                         Text("Favorites")
                     }
                 SearchView()
-                    .tag(0)
+                    .tag(Tab.search)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
                 PlayerView(radio: radios[1])
-                    .tag(2)
+                    .tag(Tab.player)
                     .tabItem {
                         Image(systemName: "play.circle")
                         Text("Player")
                     }
                 info()
-                    .tag(3)
+                    .tag(Tab.info)
                     .tabItem {
                         Image(systemName: "info.circle")
                         Text("Info")

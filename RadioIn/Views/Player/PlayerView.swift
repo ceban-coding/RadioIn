@@ -17,58 +17,57 @@ struct PlayerView: View {
     var body: some View {
         NavigationView {
             VStack {
-                StationRow(radio: radio)
-                    .padding()
+                    StationRow(radio: radio)
+                        .padding()
+                    
+                    Spacer()
                 
-                Spacer()
-            
-                VStack {
-                    
-                    HStack(alignment: .center) {
-                        Button(action: {
-                            self.isPlaying.toggle()
-                            if self.isPlaying {
-                                playStation()
-                                self.state = .play
+                    VStack {
+                        
+                        HStack(alignment: .center) {
+                            Button(action: {
+                                self.isPlaying.toggle()
+                                if self.isPlaying {
+                                    playStation()
+                                    self.state = .play
+                                }
+                                else {
+                                    radioPlayer.pause()
+                                    self.state = .stop
+                                }
+                            }) {
+                                Image( isPlaying ? "pause" : "Play")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: 160, maxHeight: 160)
                             }
-                            else {
-                                radioPlayer.pause()
-                                self.state = .stop
+                        }
+                        
+                        HStack(alignment: .center ) {
+                            
+                            Button(action: {
+                            }) {
+                                HeartView(isFilled: false)
+                                    .font(.title)
                             }
-                        }) {
-                            Image( isPlaying ? "pause" : "Play")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(maxWidth: 160, maxHeight: 160)
+                            Spacer()
+                            
+                            Text( isPlaying ? "Playing.." : "Stopped")
+                                .font(.body)
+                                .foregroundColor(.secondary)
+                                .multilineTextAlignment(.center)
+                            
+                            Spacer()
+                            SwimplyPlayIndicator(state: self.$state, color: .green)
+                                .frame(width: 35, height: 30)
                         }
+                        .padding(.init(top: 0, leading: 40, bottom: 0, trailing: 40))
                     }
+                    Spacer()
                     
-                    HStack(alignment: .center ) {
-                        
-                        Button(action: {
-                        }) {
-                            HeartView(isFilled: false)
-                                .font(.title)
-                        }
-                        Spacer()
-                        
-                        Text( isPlaying ? "Playing.." : "Stopped")
-                            .font(.body)
-                            .foregroundColor(.secondary)
-                            .multilineTextAlignment(.center)
-                        
-                        Spacer()
-                        SwimplyPlayIndicator(state: self.$state, color: .green)
-                            .frame(width: 35, height: 30)
-                    }
-                    .padding(.init(top: 0, leading: 40, bottom: 0, trailing: 40))
+                    CategoryRow(radio: radio)
+                    PlayerBar()
                 }
-                Spacer()
-                
-                CategoryRow(radio: radio)
-                PlayerBar()       
-            }
-           
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")
         }

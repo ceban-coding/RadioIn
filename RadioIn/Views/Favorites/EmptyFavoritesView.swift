@@ -25,28 +25,30 @@ struct EmptyFavoritesView: View {
                     .font(.title3)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal)
+                    .padding(.horizontal, 30)
                 
             }
             
-            Button(action: {
-          self.showDetails.toggle()
-            }) {
-                Text("Search Radio Stations")
-                    .font(.body)
-                    .padding(10)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.green, lineWidth: 2)
-                            .opacity(0.6)
-                    )
-            }
+//            Button(action: {
+//          self.showDetails.toggle()
+//            }) {
+//                Text("Search Radio Stations")
+//                    .font(.body)
+//                    .padding(10)
+//                    .overlay(
+//                        RoundedRectangle(cornerRadius: 10)
+//                            .stroke(Color.green, lineWidth: 2)
+//                            .opacity(0.6)
+//                    )
+//            }
             Spacer()
         }
     }
 }
 
 struct EmptyFavoritesView_Previews: PreviewProvider {
+    @State static var tab = Tab.search
+    
     static var previews: some View {
         EmptyFavoritesView()
     }
