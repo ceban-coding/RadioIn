@@ -4,7 +4,6 @@
 //
 //  Created by Ion Ceban on 7/7/21.
 //
-
 import SwiftUI
 
 struct StationRow: View {
@@ -19,8 +18,10 @@ struct StationRow: View {
             isSelected.toggle()
             if isSelected {
                 startFakeNetworkRequest()
+                playStation()
             } else {
                 isLoading = false
+                radioPlayer.pause()
             }
         }) {
             ZStack {
