@@ -10,11 +10,15 @@ import SwiftUI
 struct StationRow: View {
      var radio: RadioStation
     @State var radioPlayer =  musicPlayer()
+    @State var isLoading = false
     
     @State var tapped = false
     var tap: some Gesture {
         TapGesture(count: 1)
-            .onEnded { _ in self.tapped = !self.tapped }
+            .onEnded {
+                _ in self.tapped = !self.tapped
+                startFakeNetworkRequest()
+            }
     }
     
     var body: some View {
@@ -39,6 +43,11 @@ struct StationRow: View {
                             .foregroundColor(.white)
                             .opacity(0.8)
                     }
+                
+                if isLoading {
+                    ProgressView()
+                        .padding(.leading)
+                }
                     Spacer()
                     if radio.isFavorite {
                         HeartView(isFilled: true)
@@ -55,6 +64,13 @@ struct StationRow: View {
     func playStation() {
         radioPlayer.initPlayer(url: radio.urlString)
         radioPlayer.play()
+    }
+    
+    func startFakeNetworkRequest() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+            isLoading = false
+        }
     }
 
 }
