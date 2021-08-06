@@ -9,23 +9,15 @@ import SwiftUI
 
 struct SearchView: View {
     @State private var text = ""
-    
     var body: some View {
-        NavigationView {
             VStack {
                 SearchBar(text: $text)
-                    .padding(.init(top: 12, leading: 15, bottom: 5, trailing: 15))
+                    .padding(.init(top: 20, leading: 25, bottom: 7, trailing: 25))
                 SearchingListView()
-                PlayerBar()
             }
             .ignoresSafeArea(.keyboard)
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarTitle("Search")
-        }
     }
 }
-
-
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
@@ -33,10 +25,7 @@ struct SwiftUIView_Previews: PreviewProvider {
     }
 }
 
-
-
-struct SearchingListView: View { 
-    
+struct SearchingListView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
@@ -46,7 +35,8 @@ struct SearchingListView: View {
                     }
                 }
             }
-            .padding(.init( top: 0, leading: 10, bottom: 10, trailing: 10))
+            .padding(.init( top: 0, leading: 10, bottom: 0, trailing: 10))
         }
+        .padding(.bottom, 50)
     }
 }

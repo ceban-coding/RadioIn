@@ -21,6 +21,7 @@ struct CategoryItem: View {
                 .foregroundColor(.secondary)
                 .font(.caption)
         }
+        .opacity(0.8)
         .padding(.leading, 15)
     }
 }

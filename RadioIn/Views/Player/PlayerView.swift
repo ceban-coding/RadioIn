@@ -10,7 +10,6 @@ import SwiftUI
 struct PlayerView: View {
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     var radio: RadioStation
-   
     @State var radioPlayer =  musicPlayer()
     @State var isPlaying : Bool = false
   
@@ -19,11 +18,8 @@ struct PlayerView: View {
             VStack {
                     StationRow(radio: radio)
                         .padding()
-                    
                     Spacer()
-                
                     VStack {
-                        
                         HStack(alignment: .center) {
                             Button(action: {
                                 self.isPlaying.toggle()
@@ -52,22 +48,25 @@ struct PlayerView: View {
                             }
                             Spacer()
                             
-                            Text( isPlaying ? "Playing.." : "Stopped")
+                            Text( isPlaying ? "Playing" : "Stopped")
                                 .font(.body)
                                 .foregroundColor(.secondary)
                                 .multilineTextAlignment(.center)
+                                .opacity(0.6)
                             
                             Spacer()
-                            SwimplyPlayIndicator(state: self.$state, color: .green)
-                                .frame(width: 35, height: 30)
+                            SwimplyPlayIndicator(state: self.$state, color: .white)
+                                .frame(width: 30, height: 30)
+                                .opacity(0.7)
                         }
                         .padding(.init(top: 0, leading: 40, bottom: 0, trailing: 40))
                     }
                     Spacer()
                     
                     CategoryRow(radio: radio)
-                    PlayerBar()
+                        
                 }
+            .padding(.bottom, 50)
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Player")
         }

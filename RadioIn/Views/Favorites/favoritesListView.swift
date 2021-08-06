@@ -11,20 +11,24 @@ import SwiftUIListSeparator
 struct favoritesListView: View {
     var body: some View {
         NavigationView {
-            
                 List {
                         ForEach(radios) { stations in
                             StationRow(radio: stations)
-                                .padding(.init(top: 5, leading: 10, bottom: 5, trailing: 10))
+                                .padding(.init(top: 8, leading: 10, bottom: 0, trailing: 10))
                         }
+                        .onDelete(perform: delete)
                      .listRowInsets(EdgeInsets())
-                        .listSeparatorStyle(.none)
-                        
                 }
+                .listSeparatorStyle(.none)
+                .padding(.bottom, 50)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Favorites")
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+            radios.remove(atOffsets: offsets)
+        }
 }
 
 struct favoritesListView_Previews: PreviewProvider {

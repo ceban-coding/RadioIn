@@ -14,20 +14,19 @@ enum Tab {
     case info
 }
 
-
 struct ContentView: View {
     @State private var selection: Tab = .favorites
-    @State var expand = false
     
     var body: some View {
             TabView(selection: $selection) {
-                FavoritesView()
+                favoritesListView()
                     .tag(Tab.favorites)
                     .tabItem {
                         Image(systemName: "suit.heart.fill")
                         Text("Favorites")
                     }
                 SearchView()
+                    
                     .tag(Tab.search)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
@@ -46,6 +45,14 @@ struct ContentView: View {
                         Text("Info")
                     }
             }
+            .overlay(
+                VStack {
+                    Spacer()
+                    PlayerBar()
+                        .frame(height: 140)
+                }
+            )
+            .ignoresSafeArea(.keyboard)
     }
 }
 

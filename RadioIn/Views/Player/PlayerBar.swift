@@ -11,7 +11,6 @@ struct PlayerBar: View {
     @State var playerPaused : Bool = true
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     
-    
     var body: some View {
         
         ZStack {
@@ -57,9 +56,10 @@ struct PlayerBar: View {
                 }
  
                 
-                    SwimplyPlayIndicator(state: self.$state, color: .green)
+                    SwimplyPlayIndicator(state: self.$state, color: .white)
                         .frame(width: 25, height: 25)
                         .padding(.leading)
+                        .opacity(0.7)
                 
 
                 Spacer()

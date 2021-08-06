@@ -7,62 +7,76 @@
 import SwiftUI
 
 struct StationRow: View {
-     var radio: RadioStation
+    var radio: RadioStation
     @State var radioPlayer =  musicPlayer()
+    @State var state: SwimplyPlayIndicator.AudioState = .stop
     @State var isLoading = false
     @State var isSelected: Bool = false
+    @State var isPlaying: Bool = false
     
     var body: some View {
         
-        Button(action: {
-            isSelected.toggle()
-            if isSelected {
-                startFakeNetworkRequest()
-                playStation()
-            } else {
-                isLoading = false
-                radioPlayer.pause()
-            }
-        }) {
-            ZStack {
-                HStack {
-                    ArtWorkView(image: radio.image)
-                            .frame(width: 65, height: 65)
-                            .aspectRatio(contentMode: .fill)
-                        
-                            
-                        VStack(alignment: .leading, spacing: 5) {
-                            Text(radio.title)
-                                .font(.title3)
-                                .fontWeight(.regular)
-                                .foregroundColor(.white)
-                                .opacity(0.8)
-                            
-                            Text(radio.subtitle)
-                                .font(.subheadline)
-                                .fontWeight(.regular)
-                                .foregroundColor(.white)
-                                .opacity(0.8)
-                        }
-                    
-                    if isLoading {
-                        ProgressView()
-                            .padding(.leading)
-                    }
-                        Spacer()
-                        if radio.isFavorite {
-                            HeartView(isFilled: true)
-                                .padding()
-                        }
-                }
-                .background(self.isSelected ? Color.accentColor: Color("TabBarColor"))
-              
-                .cornerRadius(5)
-            }
-        }
-
-       
         
+        ZStack {
+            HStack {
+                ArtWorkView(image: radio.image)
+                    .frame(width: 65, height: 65)
+                    .aspectRatio(contentMode: .fill)
+                    .opacity(0.8)
+                
+                VStack(alignment: .leading, spacing: 5) {
+                    HStack(spacing: 20) {
+                        Text(radio.title)
+                            .font(.title3)
+                            .fontWeight(.regular)
+                            .foregroundColor(.white)
+                            .opacity(0.8)
+                        
+                        if isLoading {
+                            ProgressView()
+                        } else {
+                            SwimplyPlayIndicator(state: self.$state, color: .white)
+                                .frame(width: 18, height: 18)
+                                .opacity(0.7)
+                        }
+                    }
+                    
+                    Text(radio.subtitle)
+                        .font(.subheadline)
+                        .fontWeight(.regular)
+                        .foregroundColor(.white)
+                        .opacity(0.8)
+                }
+                Spacer()
+                
+                if radio.isFavorite {
+                    HeartView(isFilled: true)
+                        .padding()
+                }
+            }
+            .background(self.isSelected ? Color.accentColor: Color("TabBarColor"))
+            
+            .cornerRadius(5)
+        }
+        .onTapGesture {
+            onTapping()
+        }
+    }
+    
+    
+    func onTapping() {
+        isSelected.toggle()
+        if isSelected {
+            isPlaying = true
+            startFakeNetworkRequest()
+            self.state = .play
+            playStation()
+        } else {
+            self.state = .stop
+            isPlaying = false
+            isLoading = false
+            radioPlayer.pause()
+        }
     }
     
     func playStation() {

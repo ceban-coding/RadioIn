@@ -15,7 +15,7 @@ struct FavoritesView: View {
             VStack {
                 ListView()
                 //EmptyFavoritesView()
-                PlayerBar()
+                //PlayerBar()
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationBarTitle("Favorites")
@@ -35,14 +35,12 @@ struct ListView: View {
             VStack(spacing: 8) {
                 ForEach(radios) { station in
                     ZStack {
-                        NavigationLink(
-                            destination: PlayerView(radio: station)) {
-                            StationRow(radio: station)
-                        }
+                        StationRow(radio: station)
                     }
                 }
             }
-            .padding(10)
+            .padding(.init( top: 10, leading: 10, bottom: 50, trailing: 10))
         }
+        
     }
 }

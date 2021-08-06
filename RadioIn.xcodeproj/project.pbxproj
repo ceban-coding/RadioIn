@@ -36,7 +36,6 @@
 		D6D9B64726B0A7210048B281 /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64626B0A7210048B281 /* EmptySearchView.swift */; };
 		D6D9B64926B0AB4D0048B281 /* EmptyFavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64826B0AB4D0048B281 /* EmptyFavoritesView.swift */; };
 		D6D9B64B26B0CAEA0048B281 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D9B64A26B0CAEA0048B281 /* DataModel.swift */; };
-		D6E52F4926B0547C00E83B8F /* searchViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E52F4826B0547C00E83B8F /* searchViewList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -84,7 +83,6 @@
 		D6D9B64826B0AB4D0048B281 /* EmptyFavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFavoritesView.swift; sourceTree = "<group>"; };
 		D6D9B64A26B0CAEA0048B281 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		D6E52F3926ADB59200E83B8F /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		D6E52F4826B0547C00E83B8F /* searchViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = searchViewList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +170,6 @@
 			children = (
 				D6C7FAE826964A5F0000532B /* SearchView.swift */,
 				D658B283269656CB00859A7E /* SearchBar.swift */,
-				D6E52F4826B0547C00E83B8F /* searchViewList.swift */,
 				D6D9B64626B0A7210048B281 /* EmptySearchView.swift */,
 			);
 			path = Search;
@@ -327,7 +324,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6E52F4926B0547C00E83B8F /* searchViewList.swift in Sources */,
 				D663139F26B2023A00F9DA30 /* audioAnimation.swift in Sources */,
 				D6D577F2269C8A7D00AE3ABA /* RadioIn.swift in Sources */,
 				D6B203C0269CF62400E2D9B0 /* HeartView.swift in Sources */,

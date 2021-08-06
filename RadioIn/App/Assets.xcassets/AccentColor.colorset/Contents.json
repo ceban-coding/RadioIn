@@ -4,7 +4,7 @@
       "color" : {
         "color-space" : "display-p3",
         "components" : {
-          "alpha" : "0.650",
+          "alpha" : "0.600",
           "blue" : "0x98",
           "green" : "0xCD",
           "red" : "0x31"
