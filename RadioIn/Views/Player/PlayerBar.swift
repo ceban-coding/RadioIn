@@ -8,24 +8,24 @@
 import SwiftUI
 
 struct PlayerBar: View {
-    
-    @State var playerPaused : Bool = true
-    @State var state: SwimplyPlayIndicator.AudioState = .stop
+    @Binding var isPlaying: Bool
+    //@State var playerPaused : Bool = true
+   //@Binding var state: SwimplyPlayIndicator.AudioState
     
     var body: some View {
         
         ZStack {
             HStack {
                 Button(action: {
-                    self.playerPaused.toggle()
-                    if self.playerPaused {
-                        self.state = .stop
+                    self.isPlaying.toggle()
+                    if self.isPlaying {
+                        //self.state = .stop
                     }
                     else {
-                        self.state = .play
+                        //self.state = .play
                     }
                 }) {
-                    Image( playerPaused ? "playButton" : "pausebar")
+                    Image( isPlaying ? "pausebar" : "playButton")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
@@ -44,22 +44,14 @@ struct PlayerBar: View {
         
                         }
                         
-                        Text( playerPaused ? "Stopped" : "Playing")
+                        Text( isPlaying ? "Playing" : "Stoped")
                             .font(.subheadline)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.secondary)
                             .padding(.bottom, 2)
                         
                     }
-                    .padding(.init(top: 2, leading: 50, bottom: 0, trailing: 0))
                 }
- 
-                
-                    SwimplyPlayIndicator(state: self.$state, color: .white)
-                        .frame(width: 25, height: 25)
-                        .padding(.leading)
-                
-
                 Spacer()
                 Button(action: {}) {
                     HeartView(isFilled: false)
@@ -78,7 +70,7 @@ struct PlayerBar: View {
 
 struct PlayerBar_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerBar()
+        PlayerBar(isPlaying: .constant(false) )
             .previewLayout(.sizeThatFits)
     }
 }

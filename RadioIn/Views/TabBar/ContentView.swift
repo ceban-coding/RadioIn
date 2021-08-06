@@ -16,22 +16,23 @@ enum Tab {
 
 struct ContentView: View {
     @State private var selection: Tab = .favorites
+    @State private var isPlaying: Bool = false
     
     var body: some View {
             TabView(selection: $selection) {
-                favoritesListView()
+                favoritesListView(isPlaying: $isPlaying)
                     .tag(Tab.favorites)
                     .tabItem {
                         Image(systemName: "suit.heart.fill")
                         Text("Favorites")
                     }
-                SearchView()
+                SearchView(isPlaying: $isPlaying)
                     .tag(Tab.search)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
-                PlayerView(radio: radios[1])
+                PlayerView(radio: radios[1], isPlaying: $isPlaying)
                     .tag(Tab.player)
                     .tabItem {
                         Image(systemName: "play.circle")
@@ -47,7 +48,7 @@ struct ContentView: View {
             .overlay(
                 VStack {
                     Spacer()
-                    PlayerBar()
+                    PlayerBar(isPlaying: $isPlaying)
                         .frame(height: 140)
                 }
             )

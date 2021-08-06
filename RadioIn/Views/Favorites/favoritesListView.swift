@@ -9,11 +9,13 @@ import SwiftUI
 import SwiftUIListSeparator
 
 struct favoritesListView: View {
+    @Binding var isPlaying: Bool
+    
     var body: some View {
         NavigationView {
                 List {
                         ForEach(radios) { stations in
-                            StationRow(radio: stations)
+                            StationRow(radio: stations, isPlaying: $isPlaying)
                                 .padding(.init(top: 8, leading: 10, bottom: 0, trailing: 10))
                         }
                         .onDelete(perform: delete)
@@ -33,6 +35,6 @@ struct favoritesListView: View {
 
 struct favoritesListView_Previews: PreviewProvider {
     static var previews: some View {
-        favoritesListView()
+        favoritesListView(isPlaying: .constant(false))
     }
 }

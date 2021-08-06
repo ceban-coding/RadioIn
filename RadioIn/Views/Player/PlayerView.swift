@@ -10,12 +10,12 @@ import SwiftUI
 struct PlayerView: View {
     var radio: RadioStation
     @State var state: SwimplyPlayIndicator.AudioState = .stop
-    @State private var isPlaying : Bool = false
+    @Binding var isPlaying : Bool 
   
     var body: some View {
         NavigationView {
             VStack {
-                    StationRow(radio: radio)
+                StationRow(radio: radio, isPlaying: $isPlaying)
                         .padding()
                     Spacer()
                     VStack {
@@ -63,6 +63,6 @@ struct PlayerView: View {
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerView(radio: radios[1])
+        PlayerView(radio: radios[1], isPlaying: .constant(false))
     }
 }

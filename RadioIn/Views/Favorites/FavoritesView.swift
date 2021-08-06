@@ -13,7 +13,7 @@ struct FavoritesView: View {
     var body: some View {
         NavigationView {
             VStack {
-                ListView()
+                ListView(isPlaying: $isPlaying)
                 //EmptyFavoritesView()
                 //PlayerBar()
             }
@@ -30,12 +30,14 @@ struct FavoritesView_Previews: PreviewProvider {
 }
 
 struct ListView: View {
+    @Binding var isPlaying: Bool
+    
     var body: some View {
         ScrollView {
             VStack(spacing: 8) {
                 ForEach(radios) { station in
                     ZStack {
-                        StationRow(radio: station)
+                        StationRow(radio: station, isPlaying: $isPlaying)
                     }
                 }
             }

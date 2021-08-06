@@ -12,7 +12,7 @@ struct StationRow: View {
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     @State var isLoading = false
     @State var isSelected: Bool = false
-    @State var isPlaying: Bool = false
+    @Binding var isPlaying: Bool
     
     var body: some View {
         
@@ -94,7 +94,7 @@ struct StationRow: View {
 
 struct StationRow_Previews: PreviewProvider {
     static var previews: some View {
-        StationRow(radio: radios[1])
+        StationRow(radio: radios[1], isPlaying: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }
