@@ -26,7 +26,6 @@ struct ContentView: View {
                         Text("Favorites")
                     }
                 SearchView()
-                    
                     .tag(Tab.search)
                     .tabItem {
                         Image(systemName: "magnifyingglass")

@@ -8,10 +8,9 @@
 import SwiftUI
 
 struct PlayerView: View {
-    @State var state: SwimplyPlayIndicator.AudioState = .stop
     var radio: RadioStation
-    @State var radioPlayer =  musicPlayer()
-    @State var isPlaying : Bool = false
+    @State var state: SwimplyPlayIndicator.AudioState = .stop
+    @State private var isPlaying : Bool = false
   
     var body: some View {
         NavigationView {
@@ -21,24 +20,10 @@ struct PlayerView: View {
                     Spacer()
                     VStack {
                         HStack(alignment: .center) {
-                            Button(action: {
-                                self.isPlaying.toggle()
-                                if self.isPlaying {
-                                    playStation()
-                                    self.state = .play
-                                }
-                                else {
-                                    radioPlayer.pause()
-                                    self.state = .stop
-                                }
-                            }) {
-                                Image( isPlaying ? "pause" : "Play")
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxWidth: 160, maxHeight: 160)
-                            }
+                           
+                            PlayButton(radio: radio, isPlaying: $isPlaying, state: $state)
                         }
-                        
+                
                         HStack(alignment: .center ) {
                             
                             Button(action: {
@@ -73,11 +58,7 @@ struct PlayerView: View {
         
     }
     
-    
-    func playStation() {
-        radioPlayer.initPlayer(url: radio.urlString)
-        radioPlayer.play()
-    }
+   
 }
 
 struct PlayerView_Previews: PreviewProvider {

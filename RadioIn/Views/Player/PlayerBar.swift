@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PlayerBar: View {
+    
     @State var playerPaused : Bool = true
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     
@@ -18,11 +19,9 @@ struct PlayerBar: View {
                 Button(action: {
                     self.playerPaused.toggle()
                     if self.playerPaused {
-                        
                         self.state = .stop
                     }
                     else {
-                        
                         self.state = .play
                     }
                 }) {
@@ -59,7 +58,6 @@ struct PlayerBar: View {
                     SwimplyPlayIndicator(state: self.$state, color: .white)
                         .frame(width: 25, height: 25)
                         .padding(.leading)
-                        .opacity(0.7)
                 
 
                 Spacer()
