@@ -8,22 +8,23 @@
 import SwiftUI
 
 struct PlayerBar: View {
-    @Binding var isPlaying: Bool
-    //@State var playerPaused : Bool = true
-   //@Binding var state: SwimplyPlayIndicator.AudioState
+    @State var isSet: Bool = false
+    @State var isPlaying : Bool = false
+    @State var state : SwimplyPlayIndicator.AudioState = .stop    
     
+
     var body: some View {
         
         ZStack {
             HStack {
                 Button(action: {
-                    self.isPlaying.toggle()
-                    if self.isPlaying {
-                        //self.state = .stop
-                    }
-                    else {
-                        //self.state = .play
-                    }
+                    if isPlaying {
+                        self.state = .play
+                        
+                    } else  {
+                        self.state = .stop
+                       
+                    } 
                 }) {
                     Image( isPlaying ? "pausebar" : "playButton")
                         .resizable()
@@ -35,42 +36,42 @@ struct PlayerBar: View {
                 
                 ZStack {
                     VStack(alignment: .center) {
-                        HStack(alignment: .top) {
-                            Text("Retro FM")
+                        HStack(alignment: .top, spacing: 5) {
+                            Text("Diaspora")
                                 .font(.body)
                                 .multilineTextAlignment(.center)
-                            Text(Image(systemName:  "info.circle"))
+                            Text(Image(systemName: "info.circle"))
                                 .font(.caption)
-        
                         }
-                        
+
                         Text( isPlaying ? "Playing" : "Stoped")
                             .font(.subheadline)
                             .multilineTextAlignment(.center)
                             .foregroundColor(.secondary)
-                            .padding(.bottom, 2)
-                        
+                            
                     }
                 }
-                Spacer()
-                Button(action: {}) {
-                    HeartView(isFilled: false)
-                        .font(.system(size: 27))
-                }
+
+                .opacity(0.8)
                 
+                Spacer()
+                FavoriteButton(isSet: $isSet)
             }
             .padding(.leading)
             .padding(.trailing)
         }
-        .background(Color.accentColor)
+        //.padding(5)
         .frame(height: 45)
+        .background(Color.accentColor)
     }
 }
 
 
 struct PlayerBar_Previews: PreviewProvider {
+ 
+    
     static var previews: some View {
-        PlayerBar(isPlaying: .constant(false) )
+        PlayerBar()
             .previewLayout(.sizeThatFits)
     }
 }

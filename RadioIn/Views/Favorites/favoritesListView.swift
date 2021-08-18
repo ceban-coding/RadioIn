@@ -9,32 +9,40 @@ import SwiftUI
 import SwiftUIListSeparator
 
 struct favoritesListView: View {
-    @Binding var isPlaying: Bool
+    @EnvironmentObject var network : RadioAPI
+    @State var favorites = []
     
     var body: some View {
         NavigationView {
+            if favorites.isEmpty {
+                EmptyFavoritesView()
+            } else {
                 List {
-                        ForEach(radios) { stations in
-                            StationRow(radio: stations, isPlaying: $isPlaying)
-                                .padding(.init(top: 8, leading: 10, bottom: 0, trailing: 10))
-                        }
-                        .onDelete(perform: delete)
-                     .listRowInsets(EdgeInsets())
+                    ForEach(network.stations, id: \.self ) { stations in
+                        StationRow(radio: stations)
+                            .padding(.init(top: 0, leading: 10, bottom: 7, trailing: 10))
+                    }
+                    .onDelete(perform: self.deleteItem)
+                    .listRowInsets(EdgeInsets())
                 }
                 .listSeparatorStyle(.none)
-                .padding(.bottom, 50)
+                .padding(.bottom, 43)
+                .padding(.top, 10)
                 .navigationBarTitleDisplayMode(.inline)
                 .navigationBarTitle("Favorites")
+            }
         }
     }
     
-    func delete(at offsets: IndexSet) {
-            radios.remove(atOffsets: offsets)
-        }
+    private func deleteItem(at indexSet: IndexSet) {
+        self.network.stations.remove(atOffsets: indexSet)
+    }
 }
 
 struct favoritesListView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        favoritesListView(isPlaying: .constant(false))
+        favoritesListView()
+            .environmentObject(RadioAPI())
     }
 }

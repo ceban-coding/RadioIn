@@ -11,9 +11,9 @@ struct EmptyFavoritesView: View {
     @State private var showDetails = false
     
     var body: some View {
-        VStack(alignment: .center, spacing: 50){
-            Spacer()
-            VStack(spacing: 15) {
+        VStack(alignment: .center, spacing: 10){
+            
+            VStack(spacing: 10) {
                 Image(systemName: "heart")
                     .font(.system(size: 60))
                     .foregroundColor(.green)
@@ -22,12 +22,13 @@ struct EmptyFavoritesView: View {
                     .font(.title)
                     .foregroundColor(.gray)
                 Text("Search for radio stations and add ones you like to your favorites list.")
-                    .font(.title3)
+                    .font(.body)
                     .foregroundColor(.secondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 30)
+                    .padding(.horizontal, 45)
                 
             }
+            .padding(.bottom, 60)
             
 //            Button(action: {
 //          self.showDetails.toggle()
@@ -41,14 +42,12 @@ struct EmptyFavoritesView: View {
 //                            .opacity(0.6)
 //                    )
 //            }
-            Spacer()
+           
         }
     }
 }
 
 struct EmptyFavoritesView_Previews: PreviewProvider {
-    @State static var tab = Tab.search
-    
     static var previews: some View {
         EmptyFavoritesView()
     }

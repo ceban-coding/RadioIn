@@ -15,24 +15,26 @@ enum Tab {
 }
 
 struct ContentView: View {
+
     @State private var selection: Tab = .favorites
-    @State private var isPlaying: Bool = false
+    @EnvironmentObject var network : RadioAPI
+    @EnvironmentObject var player : PlayerViewModel
     
     var body: some View {
             TabView(selection: $selection) {
-                favoritesListView(isPlaying: $isPlaying)
+                favoritesListView()
                     .tag(Tab.favorites)
                     .tabItem {
                         Image(systemName: "suit.heart.fill")
                         Text("Favorites")
                     }
-                SearchView(isPlaying: $isPlaying)
+                SearchView()
                     .tag(Tab.search)
                     .tabItem {
                         Image(systemName: "magnifyingglass")
                         Text("Search")
                     }
-                PlayerView(radio: radios[1], isPlaying: $isPlaying)
+                PlayerView()
                     .tag(Tab.player)
                     .tabItem {
                         Image(systemName: "play.circle")
@@ -45,19 +47,26 @@ struct ContentView: View {
                         Text("Info")
                     }
             }
+            .onAppear {
+                network.fetchData()
+            }
+        
             .overlay(
                 VStack {
                     Spacer()
-                    PlayerBar(isPlaying: $isPlaying)
+                    PlayerBar()
                         .frame(height: 140)
                 }
             )
             .ignoresSafeArea(.keyboard)
     }
+
 }
 
 struct TabBarView_Previews: PreviewProvider {
+   
     static var previews: some View {
         ContentView()
+            .environmentObject(RadioAPI())
     }
 }

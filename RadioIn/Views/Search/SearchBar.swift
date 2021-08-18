@@ -35,9 +35,9 @@ struct SearchBar: View {
                 .animation(.default)
             }
         }
-        .padding(10)
-        .background(Color(.systemGray6))
-        .cornerRadius(8)
+        .padding(8)
+        .background(Color(.systemGray5))
+        .cornerRadius(10)
     }
 }
 

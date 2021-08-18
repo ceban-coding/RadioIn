@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CategoryRow: View {
-    var radio: RadioStation
-    let radioPlayer = musicPlayer()
+    @EnvironmentObject var modelData: RadioAPI
+    var radio: Stations
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,8 +23,8 @@ struct CategoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 0) {
-                    ForEach(radios) { station in
-                     CategoryItem(radios: station)
+                    ForEach(modelData.stations, id: \.self) { station in
+                     CategoryItem(radio: station)
                     }
                 }
                 .padding(.trailing, 10)
@@ -35,8 +35,11 @@ struct CategoryRow: View {
 }
 
 struct CategoryRow_Previews: PreviewProvider {
+    static var radios = RadioAPI().stations
+    
     static var previews: some View {
         CategoryRow(radio: radios[1])
             .previewLayout(.sizeThatFits)
+            
     }
 }

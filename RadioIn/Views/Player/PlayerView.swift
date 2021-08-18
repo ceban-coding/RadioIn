@@ -8,29 +8,31 @@
 import SwiftUI
 
 struct PlayerView: View {
-    var radio: RadioStation
+    @State var isSet: Bool = false
+    @State var isPlaying: Bool = false
     @State var state: SwimplyPlayIndicator.AudioState = .stop
-    @Binding var isPlaying : Bool 
-  
+
     var body: some View {
         NavigationView {
             VStack {
-                StationRow(radio: radio, isPlaying: $isPlaying)
-                        .padding()
+                //StationRow(station: modelData.stations)
+                       // .padding()
                     Spacer()
                     VStack {
                         HStack(alignment: .center) {
-                           
-                            PlayButton(radio: radio, isPlaying: $isPlaying, state: $state)
+                            Button(action: {
+                                
+                            }) {
+                                Image(isPlaying ? "pause" : "Play")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(maxWidth: 160, maxHeight: 160)
+                            }
                         }
                 
                         HStack(alignment: .center ) {
                             
-                            Button(action: {
-                            }) {
-                                HeartView(isFilled: false)
-                                    .font(.title)
-                            }
+                           FavoriteButton(isSet: $isSet)
                             Spacer()
                             
                             Text( isPlaying ? "Playing" : "Stopped")
@@ -41,6 +43,7 @@ struct PlayerView: View {
                             
                             Spacer()
                             SwimplyPlayIndicator(state: self.$state, color: .white)
+                           
                                 .frame(width: 30, height: 30)
                                 .opacity(0.7)
                         }
@@ -48,7 +51,7 @@ struct PlayerView: View {
                     }
                     Spacer()
                     
-                    CategoryRow(radio: radio)
+                    //CategoryRow(radio: radio)
                         
                 }
             .padding(.bottom, 50)
@@ -57,12 +60,11 @@ struct PlayerView: View {
         }
         
     }
-    
-   
 }
 
 struct PlayerView_Previews: PreviewProvider {
+    
     static var previews: some View {
-        PlayerView(radio: radios[1], isPlaying: .constant(false))
+        PlayerView()
     }
 }
