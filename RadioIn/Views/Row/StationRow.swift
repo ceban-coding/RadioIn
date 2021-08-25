@@ -9,6 +9,7 @@ import URLImage
 
 struct StationRow: View {
     var radio: Stations
+    @EnvironmentObject var network : RadioAPI
     @StateObject var Player = PlayerViewModel()
     @State var state: SwimplyPlayIndicator.AudioState = .stop
     @State private var isLoading = false

@@ -68,5 +68,6 @@ struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(RadioAPI())
+            .environmentObject(PlayerViewModel())
     }
 }

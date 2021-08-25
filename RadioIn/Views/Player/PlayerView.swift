@@ -9,21 +9,22 @@ import SwiftUI
 
 struct PlayerView: View {
     @State var isSet: Bool = false
-    @State var isPlaying: Bool = false
     @State var state: SwimplyPlayIndicator.AudioState = .stop
-
+    @EnvironmentObject var network : RadioAPI
+    @StateObject var player = PlayerViewModel()
+    
     var body: some View {
         NavigationView {
             VStack {
-                //StationRow(station: modelData.stations)
-                       // .padding()
+                //StationRow(radio: ne)
+                       //.padding()
                     Spacer()
                     VStack {
                         HStack(alignment: .center) {
                             Button(action: {
                                 
                             }) {
-                                Image(isPlaying ? "pause" : "Play")
+                                Image(player.isPlaying ? "pause" : "Play")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(maxWidth: 160, maxHeight: 160)
@@ -35,7 +36,7 @@ struct PlayerView: View {
                            FavoriteButton(isSet: $isSet)
                             Spacer()
                             
-                            Text( isPlaying ? "Playing" : "Stopped")
+                            Text( player.isPlaying ? "Playing" : "Stopped")
                                 .font(.body)
                                 .foregroundColor(.secondary)
                                 .multilineTextAlignment(.center)
@@ -66,5 +67,6 @@ struct PlayerView_Previews: PreviewProvider {
     
     static var previews: some View {
         PlayerView()
+            .environmentObject(PlayerViewModel())
     }
 }
