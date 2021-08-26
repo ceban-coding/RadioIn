@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CategoryRow: View {
-    @EnvironmentObject var modelData: RadioAPI
+    @EnvironmentObject var network: RadioAPI
     var radio: Stations
     
     var body: some View {
@@ -23,7 +23,7 @@ struct CategoryRow: View {
             
             ScrollView(.horizontal, showsIndicators: false) {
                 LazyHStack(alignment: .top, spacing: 0) {
-                    ForEach(modelData.stations, id: \.self) { station in
+                    ForEach(network.stations, id: \.self) { station in
                      CategoryItem(radio: station)
                     }
                 }

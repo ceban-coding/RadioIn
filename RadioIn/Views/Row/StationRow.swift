@@ -79,7 +79,6 @@ struct StationRow: View {
 }
 
 struct StationRow_Previews: PreviewProvider {
-   
     
     static var previews: some View {
         StationRow(radio: RadioAPI().stations[2])

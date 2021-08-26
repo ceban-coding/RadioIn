@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayerBar: View {
     @State var isSet: Bool = false
     @State var isPlaying : Bool = false
-    @State var state : SwimplyPlayIndicator.AudioState = .stop    
+    @State var state : SwimplyPlayIndicator.AudioState = .stop
     
 
     var body: some View {

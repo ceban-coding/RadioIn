@@ -15,10 +15,10 @@ enum Tab {
 }
 
 struct ContentView: View {
-
+    @State private var showDetails: Bool = false
     @State private var selection: Tab = .favorites
     @EnvironmentObject var network : RadioAPI
-    @EnvironmentObject var player : PlayerViewModel
+   
     
     var body: some View {
             TabView(selection: $selection) {
@@ -68,6 +68,5 @@ struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(RadioAPI())
-            .environmentObject(PlayerViewModel())
     }
 }

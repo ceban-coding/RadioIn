@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CategoryItem: View {
     var radio : Stations
+    @EnvironmentObject var network : RadioAPI
 
     var body: some View {
         VStack(alignment: .leading){
@@ -24,9 +25,10 @@ struct CategoryItem: View {
     }
 }
 
-//struct CategoryItem_Previews: PreviewProvider {
-//    static var previews: some View {
-//        CategoryItem()
-//            .previewLayout(.sizeThatFits)
-//    }
-//}
+struct CategoryItem_Previews: PreviewProvider {
+    static var previews: some View {
+        CategoryItem(radio: RadioAPI().stations[2])
+            .environmentObject(RadioAPI())
+            .previewLayout(.sizeThatFits)
+    }
+}

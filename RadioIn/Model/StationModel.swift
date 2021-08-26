@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Stations: Hashable, Codable{
+struct Stations: Hashable, Codable {
     let stationuuid: String
     let favicon: String
     let name: String
