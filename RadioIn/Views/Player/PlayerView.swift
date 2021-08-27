@@ -16,8 +16,8 @@ struct PlayerView: View {
     var body: some View {
         NavigationView {
             VStack {
-//                StationRow(radio: network.stations[1])
-//                    .padding()
+               //StationRow(radio: )
+               // .padding()
                 Spacer()
                 VStack {
                     HStack(alignment: .center) {
@@ -52,7 +52,7 @@ struct PlayerView: View {
                 }
                 Spacer()
                 
-                //CategoryRow(radio: radio)
+               // CategoryRow(radio: network.stations[2])
                 
             }
             .padding(.bottom, 50)

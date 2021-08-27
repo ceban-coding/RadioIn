@@ -23,7 +23,7 @@ struct EmptySearchView: View {
             }
             .padding(5)
             
-            Text(" Search by station name,\n country or genre.")
+            Text(" Search by station name,\n or country.")
                 .font(.title3)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.secondary)
@@ -32,6 +32,7 @@ struct EmptySearchView: View {
         }
     }
 }
+
 
 struct EmptySearchView_Previews: PreviewProvider {
     static var previews: some View {

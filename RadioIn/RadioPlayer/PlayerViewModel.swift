@@ -11,6 +11,7 @@ import UIKit
 
 class PlayerViewModel: ObservableObject {
     @Published var isPlaying: Bool = false
+    
  
     var player = AVPlayer()
     var playerItem: AVPlayerItem!

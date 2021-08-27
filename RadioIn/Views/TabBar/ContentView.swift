@@ -11,23 +11,24 @@ enum Tab {
     case favorites
     case search
     case player
-    case info
+    case topList
 }
 
 struct ContentView: View {
     @State private var showDetails: Bool = false
     @State private var selection: Tab = .favorites
     @EnvironmentObject var network : RadioAPI
+    @EnvironmentObject var player: PlayerViewModel
    
     
     var body: some View {
             TabView(selection: $selection) {
                 favoritesListView()
-                    .tag(Tab.favorites)
                     .tabItem {
                         Image(systemName: "suit.heart.fill")
                         Text("Favorites")
                     }
+                    .tag(Tab.favorites)
                 SearchView()
                     .tag(Tab.search)
                     .tabItem {
@@ -39,18 +40,15 @@ struct ContentView: View {
                     .tabItem {
                         Image(systemName: "play.circle")
                         Text("Player")
+                            
                     }
-                info()
-                    .tag(Tab.info)
+                topVotedList()
+                    .tag(Tab.topList)
                     .tabItem {
-                        Image(systemName: "info.circle")
-                        Text("Info")
+                        Image(systemName: "music.note.list")
+                        Text("Top Voted")
                     }
             }
-            .onAppear {
-                network.fetchData()
-            }
-        
             .overlay(
                 VStack {
                     Spacer()
@@ -59,8 +57,10 @@ struct ContentView: View {
                 }
             )
             .ignoresSafeArea(.keyboard)
+            .onAppear {
+                network.fetchData()
+            }
     }
-
 }
 
 struct TabBarView_Previews: PreviewProvider {
@@ -68,5 +68,6 @@ struct TabBarView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
             .environmentObject(RadioAPI())
+            .environmentObject(PlayerViewModel())
     }
 }
